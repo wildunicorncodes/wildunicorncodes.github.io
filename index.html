@@ -1,12 +1,753 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SAAQClic - Boîte au lettres</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../css-js/saaq-components.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="../data/enregistre-data.json"></script> -->
+
+
+    <style>
+
+        .footer {
+    position: relative;
+    margin-right: 10px;
+    bottom: 10px;
+    width: 100%;
+    border-top: 1px solid #dfe3e6;
+    background-color: #fff;
+    }
+    .expandable-row { line-height: 125%;}
+    .expandable-row .niv { font-size: 95%; }
+
+    .header {
+        position: fixed;
+        top: 0px;
+        margin-right: 10px;
+        z-index: 1;
+        
+        width: 85%;
+        border-bottom: 1px solid #dfe3e6;
+        background-color: #ffffff; 
+    }
+
+    .notification-container{
+        position: fixed;
+        top: 60px;
+        right: 0px;
+    }
+
+    .bx--overflow-menu-container{
+        float: right;
+    }
+
+    #main-content{
+        margin-left: 1rem;
+    }
+</style>
+
+
+    <script>
+        var inbox_data = [
+            { title: "Title goes here", desc: "Description goes here", date: "DD/MM/YYYY", pill: ["unread", "marked"], action: "< LINK GOES HERE >" },
+            { title: "Title goes here", desc: "Description goes here", date: "DD/MM/YYYY", pill: ["unread", "marked"], action: "< LINK GOES HERE >" },
+            { title: "Title goes here", desc: "Description goes here", date: "DD/MM/YYYY", pill: ["unread", "marked"], action: "< LINK GOES HERE >" }
+        ];
+    </script>
+
 </head>
+
 <body>
-    <h1>HELLO WORLD</h1>
+    <nav role="navigation" aria-label="Interior Left Navigation" id="collapse_bar" data-interior-left-nav class="bx--interior-left-nav bx--interior-left-nav--collapseable bx--interior-left-nav--collapsed">
+        <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Espace client
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Préférences de commuinication</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2B" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Mes établissements</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2C" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Mes mandats</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2D" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Mes infos personnelles</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2D" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Coordonnées</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2D" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Mot de passe</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Nofication
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Messages
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Consulter un message</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2B" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Envoyer un fichier à la SAAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Dossier de conduite
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Mon dossier de conduite de
+                            véhicules lourds</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Mon dossier de propriètaire
+                            exploitant véhicules lourds</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Rendez-vous
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Rôle et Accès
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Gestion des utilisateurs</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Gestion des persmissions</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Factures
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Véhicules
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Consulter un véhicule</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Déremiser, remiser ou mettre au
+                            rancart</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Achat et vente d'un véhicule</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Enregistrer un véhicules</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Consulter les certificats de mes
+                            clients</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Gestion des groupes de véhicules</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Certificats d'immatriculation</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Vérifier le droit d'immatriculer
+                            un véhicule</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Rapport vérification mécanique</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Inscrire un véhicule au
+                            programme PEP</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Plaque d'immatriculation
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Immatriculer un véhicules</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Annuler ou remplacer une plaque
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Plaque personnalisée
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Comportement
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
+                data-interior-left-nav-item data-interior-left-nav-with-children>
+                <a class="left-nav-list__item-link">
+                    Permis de conduire
+                    <div class="left-nav-list__item-icon">
+                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                            <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                    </div>
+                </a>
+                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
+                    data-interior-left-nav-nested-list>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Permis de conduire #123</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Remplacement de permis</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Annuler classe de permis</a>
+                    </li>
+                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
+                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
+                            tabindex="-1">Vérifier un permis de conduire</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Inventaire de pièces officielles
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Informations médicales
+                </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="#">
+                    Déconnexion
+                </a>
+            </li>
+        </ul>
+        <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse id="collapse_btn">
+            <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
+                <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd"
+                    data-interior-left-nav-arrow>
+                    <title>Collapse nav pane</title>
+                    <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <div class="bx--grid">
+        <div class="bx--row">
+            <div class="bx--col-xs-12">
+                <div class="header">
+                    <div style="float: left;">
+                        <p style="margin-left:1em;margin-top:1em;"> SAAQ</p>
+                    </div>
+                    <div style="text-align: right; color: #ffffff;">
+                        <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                        <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'"
+                            style="margin:8px;" type="button">
+                            Boite aux lettres
+                            <svg style="fill:#ffffff;" width="16" height="11" viewBox="0 0 16 11">
+                                <path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path>
+                            </svg></button>
+                        <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'"
+                            style="margin:8px;" type="button">Notification
+                            <svg style="fill:#ffffff;" width="14" height="16" viewBox="0 0 14 16">
+                                <path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path>
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <br><br><br>
+            </div>
+
+        </div>
+    </div>
+    <div class="bx-container">
+        <div class="bx--grid" id="main-content">
+            <br />
+            <br />
+
+
+            <div class="bx--row" id="inbox-container">
+
+                <div class="bx--col-xs-12">
+                    <div class="bx--module ">
+                        <div class="bx--module__inner">
+                            <div class="bx--module__header" style="display: block;">
+                                <h3 class="bx--type-epsilon">Notification</h3>
+                                <br>
+                                <div data-notification class="bx--inline-notification bx--inline-notification--warning"
+                                    role="alert">
+                                    <div class="bx--inline-notification__details">
+                                        <svg class="bx--inline-notification__icon" width="16" height="16" viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM3.293 4.707l8 8 1.414-1.414-8-8-1.414 1.414z"
+                                                fill-rule="evenodd" />
+                                        </svg>
+                                        <div class="bx--inline-notification__text-wrapper">
+                                            <p class="bx--inline-notification__title">BMW Z4 X2X 3B5 #71046301640163945</p>
+                                            <p class="bx--inline-notification__subtitle">Ce véhicule devra être soumis
+                                                à une vérification mécanique pour circuler s'il n'est pas déremisé
+                                                avant le 30 novembre 2018.</p>
+                                        </div>
+                                    </div>
+                                    <button data-notification-btn class="bx--inline-notification__close-button" type="button"
+                                        aria-label="close">
+                                        <svg aria-hidden="true" class="bx--inline-notification__close-icon" width="10"
+                                            height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.32 5L10 8.68 8.68 10 5 6.32 1.32 10 0 8.68 3.68 5 0 1.32 1.32 0 5 3.68 8.68 0 10 1.32 6.32 5z"
+                                                fill-rule="nonzero" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div data-notification class="bx--inline-notification bx--inline-notification--success"
+                                    role="alert">
+                                    <div class="bx--inline-notification__details">
+                                        <svg class="bx--inline-notification__icon" width="16" height="16" viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM3.293 4.707l8 8 1.414-1.414-8-8-1.414 1.414z"
+                                                fill-rule="evenodd" />
+                                        </svg>
+                                        <div class="bx--inline-notification__text-wrapper">
+                                            <p class="bx--inline-notification__title">Paiemenet reçu</p>
+                                            <p class="bx--inline-notification__subtitle">Nous avons reçu votre paiement
+                                                pour votre xyz. Merci!</p>
+                                        </div>
+                                    </div>
+                                    <button data-notification-btn class="bx--inline-notification__close-button" type="button"
+                                        aria-label="close">
+                                        <svg aria-hidden="true" class="bx--inline-notification__close-icon" width="10"
+                                            height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.32 5L10 8.68 8.68 10 5 6.32 1.32 10 0 8.68 3.68 5 0 1.32 1.32 0 5 3.68 8.68 0 10 1.32 6.32 5z"
+                                                fill-rule="nonzero" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+
+
+                            <div class="bx--module__content">
+                                <div class="bx--col-xs-6">
+                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'"
+                                        type="button">Consulter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="bx--col-xs-8">
+                    <div class="bx--module ">
+                        <div class="bx--module__inner">
+                            <div class="bx--module__header" style="display: block;">
+                                <h3 class="bx--type-epsilon">Mes véhicules</h3>
+                                <br>
+                                <div class="bx--data-table-v2-container" data-table-v2>
+                                    <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <button class="bx--table-sort-v2" data-event="sort">
+                                                        <span class="bx--table-header-label">Véhicule</span>
+                                                        <svg class="bx--table-sort-v2__icon" width="10" height="5"
+                                                            viewBox="0 0 10 5" aria-label="Sort rows by this header in descending order"
+                                                            alt="Sort rows by this header in descending order">
+                                                            <title>Sort rows by this header in descending order</title>
+                                                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                                        </svg>
+                                                    </button>
+                                                </th>
+                                                <th>
+                                                    <button class="bx--table-sort-v2" data-event="sort">
+                                                        <span class="bx--table-header-label">Statut</span>
+                                                        <svg class="bx--table-sort-v2__icon" width="10" height="5"
+                                                            viewBox="0 0 10 5" aria-label="Sort rows by this header in descending order"
+                                                            alt="Sort rows by this header in descending order">
+                                                            <title>Sort rows by this header in descending order</title>
+                                                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                                        </svg>
+                                                    </button>
+                                                </th>
+                                                <th>
+                                                    <button class="bx--table-sort-v2" data-event="sort">
+                                                        <span class="bx--table-header-label">Prochaine action
+                                                            importante</span>
+                                                        <svg class="bx--table-sort-v2__icon" width="10" height="5"
+                                                            viewBox="0 0 10 5" aria-label="Sort rows by this header in descending order"
+                                                            alt="Sort rows by this header in descending order">
+                                                            <title>Sort rows by this header in descending order</title>
+                                                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                                        </svg>
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>BMW Z4 2011 <br> X2X 3B5 #71046301640163945
+                                                </td>
+                                                <td>Remisé</td>
+                                                <td>Déremiser le véhicule.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ford Focus <br> A2V 3K2 #71046301640163945
+                                                </td>
+                                                <td>Remisé</td>
+                                                <td>Déremiser le véhicule.</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <br>
+
+
+                            <div class="bx--module__content">
+                                <div class="bx--col-xs-6">
+                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'"
+                                        type="button">Voir tous mes véhicule</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="bx--col-xs-4">
+                    <div class="bx--module ">
+                        <div class="bx--module__inner">
+                            <div class="bx--module__header" style="display: block;">
+                                <h3 class="bx--type-epsilon">Mes factures</h3>
+                                <br>
+                                <p style="text-align:center;">Vouz avez 1 facture dans voitre dossier</p>
+                                <br>
+                            </div>
+
+
+                            <div class="bx--module__content">
+                                <div class="bx--col-xs-6">
+                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'"
+                                        type="button">Consulter mes factures</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx--col-xs-8">
+                    <div class="bx--module ">
+                        <div class="bx--module__inner">
+                            <div class="bx--module__header" style="display: block;">
+                                <h3 class="bx--type-epsilon">Saviez vous que?</h3>
+                                <br>
+                                <p>Renouvellement simple et rapide de votre immatriculation IRP : Vous pouvez faire
+                                    votre déclaration des distances en ligne. Vous avez jusqu'à décembre pour déclarer
+                                    le kilométrage que vous avez parcouru du 1er juillet 2017 au 30 juin 2018.</p>
+                                <br>
+                            </div>
+
+                            <div class="bx--module__content">
+                                <div class="bx--col-xs-6">
+                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'"
+                                        type="button">Consulter mes factures</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx--col-xs-4">
+                    <div class="bx--module ">
+                        <div class="bx--module__inner">
+                            <div class="bx--module__header" style="display: block;">
+                                <h3 class="bx--type-epsilon">Boîte aux lettres</h3>
+                                <br>
+                                <p style="text-align:center;">Vouz avez reçu 4 messages dans votre boîte aux lettres.</p>
+                                <br>
+                            </div>
+
+                            <div class="bx--module__content">
+                                <div class="bx--col-xs-6">
+                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'"
+                                        type="button">Consulter la boîte aux lettres</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </div>
+            <!-- ****************************************************************************************************************************** -->
+
+            <!-- Sitcky Footer Action Bar ***************************************************************************************************** -->
+            <!-- <div class="bx--row">
+                <div class="bx--col-xs-12">
+                    <p style="margin-left:1em;margin-top:1em;">
+                        <strong>Pour plus d’information :
+                            <a href="https://saaq.gouv.qc.ca/immatriculation/remiser-deremiser-mettre-rancart/"
+                                class="bx--link"> Remiser un véhicule, le déremiser ou le mettre au rancart</a>
+                        </strong>
+                        <br><br>
+                    </p>
+                </div>
+                <div class="bx--col-xs-12">
+                    <div class="footer">
+                        <div style="float: left;">
+                            <p style="margin-left:1em;margin-top:1em;">
+                                <a href="remisage-1.html" class="bx--link">Annuler</a>
+                            </p>
+                        </div>
+                        <div style="text-align: right">
+                            <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                            <button class="bx--btn bx--btn--primary" onclick="window.location.href='remisage-3.html'"
+                                style="margin:8px;" type="button">Passer à l’étape suivante</button>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br>
+            </div> -->
+            <!-- End of div .bx--grid-->
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="css-js/saaq-components.js"></script>
+    <script>
+
+    </script>
+    <script>
+        var openSideNav = false;
+        toggleSideNav();
+        toggleSideNav();
+
+        function toggleSideNav() {
+            //document.getElementById("mySidenav").style.width = "250px";
+            if (openSideNav == true) {
+                document.getElementById("main-content").style.marginLeft = "5%";
+                openSideNav = false;
+                console.log("NAV CLOSED");
+            } else {
+                document.getElementById("main-content").style.marginLeft = "17%";
+                openSideNav = true;
+                console.log("NAV OPENED");
+            }
+        }
+
+    </script>
+
+
+    <script>
+        // Notification Toast
+        $(document).ready(function () {
+            $("#opt-6-error").click(function () {
+                $("#opt-6-error").show();
+            });
+            $("#opt-3-success").click(function () {
+                $("#div1").fadeIn(1500);
+            });
+            $("#opt-6-success").click(function () {
+                $("#div2").fadeIn(1500);
+            });
+            $("#opt-9-success").click(function () {
+                $("#div3").fadeIn(1500);
+            });
+        });
+    </script>
+    <script>
+        // Date picker
+        var today = new Date();
+
+
+        function initDatePickers() {
+            var date_picker_1 = document.getElementById("date-picker-1");
+            date_picker_1.addEventListener('change', function (e) {
+                getDatePickerInput(e);
+            });
+            var date_picker_2 = document.getElementById("date-picker-2");
+            date_picker_2.addEventListener('change', function (e) {
+                getDatePickerInput(e);
+            });
+            var date_picker_3 = document.getElementById("date-picker-3");
+            date_picker_3.addEventListener('change', function (e) {
+                getDatePickerInput(e);
+            });
+            var date_picker_4 = document.getElementById("date-picker-4");
+            date_picker_4.addEventListener('change', function (e) {
+                getDatePickerInput(e);
+            });
+            var date_picker_6 = document.getElementById("date-picker-6");
+            date_picker_6.addEventListener('change', function (e) {
+                getDatePickerInput(e);
+            });
+
+        }
+
+        function getDatePickerInput(e) {
+            var input_date = e.target.value;
+
+            console.log(isDateFutur(input_date.split("/")));
+            if (!isDateFutur(input_date.split("/"))) {
+                invalideDateInput(e.target);
+            }
+            else {
+                valideDateInput(e.target);
+            }
+
+        }
+
+        function isDateFutur(input_date) {
+            if (input_date[2] > getCurrentYear()) {
+                return true;
+            }
+            else if (input_date[2] == getCurrentYear() && input_date[0] > getCurrentMonth()) {
+                return true;
+            }
+            else if (input_date[2] == getCurrentYear() && input_date[0] == getCurrentMonth() && input_date[1] >= getCurrentDay()) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        function valideDateInput(datePicker) {
+            datePicker.removeAttribute("data-invalid");
+        }
+        function invalideDateInput(datePicker) {
+            datePicker.setAttribute("data-invalid", "true");
+        }
+
+        // Return current date :: Day, Month, Year.
+        function getCurrentDay() {
+            var dd = today.getDate();
+
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            return dd;
+        }
+        function getCurrentMonth() {
+            var mm = today.getMonth() + 1; //January is 0!
+
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+
+            return mm;
+
+        }
+        function getCurrentYear() {
+            var yyyy = today.getFullYear();
+            return yyyy;
+        }
+
+        initDatePickers();
+
+    </script>
+
+
 </body>
+
 </html>
