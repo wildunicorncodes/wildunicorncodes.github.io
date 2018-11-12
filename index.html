@@ -8,6 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="../css-js/saaq-components.css">
+    <script src="css-js/user-testing-func.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="../data/enregistre-data.json"></script> -->
 
@@ -47,7 +48,7 @@
     }
 
     #main-content{
-        margin-left: 1rem;
+        margin-left: 0%;
     }
 </style>
 
@@ -63,306 +64,220 @@
 </head>
 
 <body>
-    <nav role="navigation" aria-label="Interior Left Navigation" id="collapse_bar" data-interior-left-nav class="bx--interior-left-nav bx--interior-left-nav--collapseable bx--interior-left-nav--collapsed">
-        <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Espace client
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Préférences de commuinication</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2B" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Mes établissements</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2C" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Mes mandats</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2D" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Mes infos personnelles</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2D" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Coordonnées</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2D" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Mot de passe</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Nofication
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Messages
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Consulter un message</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2B" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Envoyer un fichier à la SAAQ</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Dossier de conduite
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Mon dossier de conduite de
-                            véhicules lourds</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Mon dossier de propriètaire
-                            exploitant véhicules lourds</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Rendez-vous
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Rôle et Accès
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Gestion des utilisateurs</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Gestion des persmissions</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Factures
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Véhicules
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Consulter un véhicule</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Déremiser, remiser ou mettre au
-                            rancart</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Achat et vente d'un véhicule</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Enregistrer un véhicules</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Consulter les certificats de mes
-                            clients</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Gestion des groupes de véhicules</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Certificats d'immatriculation</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Vérifier le droit d'immatriculer
-                            un véhicule</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Rapport vérification mécanique</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Inscrire un véhicule au
-                            programme PEP</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Plaque d'immatriculation
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Immatriculer un véhicules</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Annuler ou remplacer une plaque
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Plaque personnalisée
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Comportement
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item left-nav-list__item--has-children"
-                data-interior-left-nav-item data-interior-left-nav-with-children>
-                <a class="left-nav-list__item-link">
-                    Permis de conduire
-                    <div class="left-nav-list__item-icon">
-                        <svg class="bx--interior-left-nav__icon" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
-                            <path d="M10 0L5 5 0 0z"></path>
-                        </svg>
-                    </div>
-                </a>
-                <ul role="menu" aria-hidden="true" class="left-nav-list left-nav-list--nested" aria-label="nested left nav list"
-                    data-interior-left-nav-nested-list>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Permis de conduire #123</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Remplacement de permis</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Annuler classe de permis</a>
-                    </li>
-                    <li class="left-nav-list__item" data-interior-left-nav-nested-item role="menuitem" tabindex="-1">
-                        <a href="#example-item-2A" class="left-nav-list__item-link" data-interior-left-nav-item-link
-                            tabindex="-1">Vérifier un permis de conduire</a>
-                    </li>
-                </ul>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Inventaire de pièces officielles
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Informations médicales
-                </a>
-            </li>
-            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link" href="#">
-                    Déconnexion
-                </a>
-            </li>
-        </ul>
-        <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse id="collapse_btn">
-            <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
-                <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd"
-                    data-interior-left-nav-arrow>
-                    <title>Collapse nav pane</title>
-                    <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
-                </svg>
-            </a>
-        </div>
-    </nav>
-    <div class="bx--grid">
-        <div class="bx--row">
-            <div class="bx--col-xs-12">
-                <div class="header">
-                    <div style="float: left;">
-                        <p style="margin-left:1em;margin-top:1em;"> SAAQ</p>
-                    </div>
-                    <div style="text-align: right; color: #ffffff;">
-                        <span style="margin-right: 4px; margin-bottom: 4px;"></span>
-                        <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'"
-                            style="margin:8px;" type="button">
-                            Boite aux lettres
-                            <svg style="fill:#ffffff;" width="16" height="11" viewBox="0 0 16 11">
-                                <path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path>
-                            </svg></button>
-                        <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'"
-                            style="margin:8px;" type="button">Notification
-                            <svg style="fill:#ffffff;" width="14" height="16" viewBox="0 0 14 16">
-                                <path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path>
-                            </svg>
-                        </button>
 
-                    </div>
-                </div>
-                <br><br><br>
-            </div>
 
-        </div>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<style>
+        #mainbody{
+            margin-left: 4%;
+            margin-right: 5%;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            /* background-color: #ddd; */
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: rgb(255, 255, 255);
+            color: white;
+        }
+        .sidenav > ul li {
+            margin: 20px;
+        }
+        
+        .navside {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            opacity: 1;
+            overflow-x: hidden;
+            padding-top: 100px;
+            transition: 0.7s;
+        }
+        
+        .navside a, .dropdown-btn{
+            display: block;
+            padding: 20px 30px;
+            font-size:1em;
+            text-decoration: none;
+            color: #818181;
+            border: none;
+            background: none;
+            cursor: pointer;
+            outline: none;
+            width: 100%;
+            text-align: left;
+        
+        }
+        
+        .navside a.sideNavItem:hover, .dropdown-btn:hover{
+            color:#007575;
+            transition:0.4s;
+            border-left: 4px solid #007575;
+        }
+        .sideNavItem:hover ~ .sideNavItem-Sub:hover{
+            border-left: 10px solid #007575 !important;
+        }
+        
+        .close{
+            text-align: right !important;
+            z-index: 1;
+        }
+        .navside .close {
+            position: absolute;
+            top: -18px;
+            right: -27px;
+            font-size: 0em;
+        }
+        
+        .slide a{
+            color: #000;
+            font-size: 2em;
+        }
+        
+        #main-content{
+            padding-left: 30px;
+            transition: padding-left 0.7s;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        /* Add an active class to the active dropdown button */
+        .active {
+            border-left: 8px solid #007575;
+            background-color: rgb(228, 228, 228);
+            color: rgb(0, 0, 0);
+        }
+        .logo{
+            background-color: #ffffff;
+            position: absolute;
+            top: 0;
+        
+        }
+        
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            background-color: #f5f5f5;
+            /*padding-left: 8px;*/
+        }
+        
+        /* Some media queries for responsiveness */
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        } 
+</style>
+<div class="topnav">
+    <a class="logo" href="#home" onmouseover="openSlideMenu()" onclick="openSlideMenu()"><img src="assets/img/SAAQ_logo.png" style="max-height: 53px; height:20%;"alt=""></a>
+    <a href="#about" style="float:right;"><button class="bx--btn bx--btn--primary" onclick="window.location.href='remisage-3.html'"
+        style="margin:8px;" type="button">Boite aux lettres  <svg style="fill:#ffffff;" width="16" height="11" viewBox="0 0 16 11">
+                <path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path>
+            </svg></button></a>
+    <a href="#about" style="float:right;"><button class="bx--btn bx--btn--primary" onclick="window.location.href='remisage-3.html'"
+        style="margin:8px;" type="button">Notification  <svg style="fill:#ffffff;" width="14" height="16" viewBox="0 0 14 16">
+                <path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path>
+        </svg></button></a>
+</div>
+
+
+<div id="menu" class="navside">
+    <a href="#" class="close" onclick="closeSlideMenu()">
+            <svg width="35" height="35" viewBox="0 0 20 20"><path d="M10 9.293l4.146-4.147.708.708L10.707 10l4.147 4.146-.708.708L10 10.707l-4.146 4.147-.708-.708L9.293 10 5.146 5.854l.708-.708L10 9.293z"></path></svg>
+        </a>
+    <a class="logo" href="#home"><img src="assets/img/SAAQ_logo.png" style="max-height: 53px; height:20%;"alt=""></a>
+    
+    <button class="dropdown-btn active">Espace client <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container" style="display:block;">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Préférences de commuinication</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mes établissements</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mes mandats</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mes infos personnelles</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Coordonnées</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mot de passe</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Gestion des utilisateurs</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Gestion des persmissions</a>
     </div>
-    <div class="bx-container">
+
+    <a class="sideNavItem" href="#">Nofications <span class="bx--tag bx--tag--ibm">2</span></a>
+    <a class="sideNavItem" href="#">Messages</a> 
+    <div class="dropdown-container">
+    <a class="sideNavItem sideNavItem-Sub" href="#">Consulter un message</a>
+    <a class="sideNavItem sideNavItem-Sub" href="#">Envoyer un fichier à la SAAQ</a>
+    </div>
+
+    <button class="dropdown-btn">Dossier de conduite <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de conduite de véhicules lourds</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de propriètaire exploitant véhicules lourds</a>
+    </div>
+
+    <a class="sideNavItem" href="#">Rendez-vous</a>
+
+    <a class="sideNavItem" href="#">Factures</a>
+
+    <button class="dropdown-btn">Véhicules  
+    <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
+    </button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Consulter un véhicule</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Déremiser, remiser ou mettre au rancart</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Achat et vente d'un véhicule</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Enregistrer un véhicules</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Consulter les certificats de mes clients</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Gestion des groupes de véhicules</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier le droit d'immatriculer un véhicule</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Rapport vérification mécanique</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Inscrire un véhicule au programme PEP</a>
+    </div>
+
+    <button class="dropdown-btn">Plaque d'immatriculation <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Immatriculer un véhicules</a>
+    </div>
+
+    <a class="sideNavItem" href="#">Annuler ou remplacer une plaque</a>
+
+    <a class="sideNavItem" href="#">Plaque personnalisée</a>
+
+    <a class="sideNavItem" href="#">Comportement</a>
+
+    <button class="dropdown-btn">Permis de conduire <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Permis de conduire #123</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Remplacement de permis</a>
+        <a class="sideNavItem sideNavItem-Sub" href="annuler-permis-1.html">Annuler classe de permis</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier un permis de conduire</a>
+    </div>
+
+    <a class="sideNavItem" href="#">Inventaire de pièces officielles</a>
+    <a class="sideNavItem" href="#">Informations médicales</a>
+    <a class="sideNavItem" href="#">Déconnexion</a>\
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        
+    <div id="mainbody">
+        <div class="bx-container">
         <div class="bx--grid" id="main-content">
             <br />
             <br />
@@ -610,35 +525,17 @@
 
         </div>
     </div>
+    </div>
+
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="css-js/saaq-components.js"></script>
-    <script>
-
-    </script>
-    <script>
-        var openSideNav = false;
-        toggleSideNav();
-        toggleSideNav();
-
-        function toggleSideNav() {
-            //document.getElementById("mySidenav").style.width = "250px";
-            if (openSideNav == true) {
-                document.getElementById("main-content").style.marginLeft = "5%";
-                openSideNav = false;
-                console.log("NAV CLOSED");
-            } else {
-                document.getElementById("main-content").style.marginLeft = "17%";
-                openSideNav = true;
-                console.log("NAV OPENED");
-            }
-        }
-
-    </script>
 
 
-    <script>
+
+    <!-- <script>
         // Notification Toast
         $(document).ready(function () {
             $("#opt-6-error").click(function () {
@@ -654,8 +551,8 @@
                 $("#div3").fadeIn(1500);
             });
         });
-    </script>
-    <script>
+    </script> -->
+    <!-- <script>
         // Date picker
         var today = new Date();
 
@@ -745,7 +642,48 @@
 
         initDatePickers();
 
-    </script>
+    </script> -->
+
+<script>
+    function openSlideMenu(){
+        document.getElementById('mainbody').style.marginLeft = '0';
+        document.getElementById('menu').style.width = '270px';
+        document.getElementById('main-content').style.paddingLeft = '275px';
+    }
+    function closeSlideMenu(){
+        document.getElementById('menu').style.width = '0';
+        document.getElementById('main-content').style.paddingLeft = '25px';
+        document.getElementById('mainbody').style.marginLeft = '3%';
+    }
+    openSlideMenu();
+</script>  
+<!-- side nav scripts -->
+<script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    // var dropdown = document.getElementsByClassName("dropdown-btn");
+    // var i;
+    
+    // for (i = 0; i < dropdown.length; i++) {
+    //     dropdown[i].addEventListener("click", function() {
+    //     this.classList.toggle("active");
+    //     var dropdownContent = this.nextElementSibling;
+    //     if (dropdownContent.style.display === "block") {
+    //         dropdownContent.style.display = "none";
+    //     } else {
+    //         dropdownContent.style.display = "block";
+    //     }
+    // });
+    // dropdown[i].addEventListener("mouseover", function() {
+    //         this.classList.toggle("active");
+    //         var dropdownContent = this.nextElementSibling;
+    //         if (dropdownContent.style.display === "block") {
+    //             dropdownContent.style.display = "none";
+    //         } else {
+    //             dropdownContent.style.display = "block";
+    //         }
+    //     });
+    // }
+</script>
 
 
 </body>
