@@ -19,7 +19,11 @@
     z-index: 0;
     height: 33px;
     padding-left: 180px;
-    
+
+}
+
+.supfooter p {
+    margin-left:1em;margin-top:0.5em;
 }
 .expandable-row { line-height: 125%;}
 .expandable-row .niv { font-size: 95%; }
@@ -29,10 +33,10 @@
     top: 0px;
     margin-right: 10px;
     z-index: 1;
-    
+
     width: 85%;
     border-bottom: 1px solid #dfe3e6;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 .notification-container{
@@ -68,6 +72,24 @@ right: 0px;
   background-color: rgb(255, 255, 255);
   color: white;
 }
+
+.topnav p {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav p a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
 .sidenav > ul li {
     margin: 20px;
 }
@@ -110,7 +132,14 @@ right: 0px;
     color:#007575;
     transition:0.4s;
     border-left: 8px solid #66acac;
-    
+
+}
+
+.navside a.sideNavItem.active{
+    color:#007575;
+    transition:0.4s;
+    border-left: 8px solid #007575;
+
 }
 
 .close{
@@ -120,7 +149,7 @@ right: 0px;
     left: -28px;
     padding-right: 20px;
     padding-left: 36px;
-    
+
 }
 .open{
 
@@ -146,7 +175,7 @@ right: 0px;
 }
 #menu {
 width: 270px;
-  }   
+  }
 
 #main-content{
     padding-left: 30px;
@@ -174,7 +203,7 @@ width: 270px;
     position: absolute;
     top: 0;
     margin-left: 10px;
-    padding-top: 10px; 
+    padding-top: 10px;
 }
 #nextStepBtn{
     float: right ;
@@ -209,4 +238,4 @@ width: 270px;
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-} 
+}

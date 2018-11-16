@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
     <meta charset="UTF-8">
-    <title>SAAQClic - Remiser, déremiser ou mettre au rancart</title>
+    <title>Annuler une classe ou un permis - Espace Client - SAAQ</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css-js/saaq-components.css">
-    <link rel="stylesheet" href="assets/custom.css">
+    <link rel="stylesheet" href="css-js/custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="../data/enregistre-data.json"></script> -->
 
@@ -27,37 +27,45 @@
             style="margin:8px;" type="button">Boite aux lettres  <svg style="fill:#ffffff;" width="16" height="11" viewBox="0 0 16 11">
                     <path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path>
                 </svg></button></a> -->
-        <a href="#about" style="float:right; padding-right:10%;"><button class="bx--btn bx--btn--primary" onclick="window.location.href='#'"
-            style="margin:8px;" type="button">En  
+        <div class="top--nav-right"  style="float:right; padding-right:10%;">
+          <p style="padding-top: 25px;">Bonjour Anne-Marie</p>
+            <a href="#about"><button class="bx--btn bx--btn--primary" onclick="window.location.href='#'" style="margin:8px;" type="button">
+                <svg width="20" height="20" style="fill:#fff;" viewBox="0 0 20 20"><path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-5 8H4v-2.48a4.5 4.5 0 0 1 4.5-4.5l3.022.014a4.5 4.5 0 0 1 4.478 4.5V18h-1v-2.466a3.5 3.5 0 0 0-3.483-3.5l-3-.015A3.504 3.504 0 0 0 5 15.52V18z"></path></svg>
+                <!-- <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 13.7c1.1.8 2.5 1.3 4 1.3s2.9-.5 4-1.3v-1.2c0-.8-.7-1.5-1.5-1.5h-5c-.8 0-1.5.7-1.5 1.5v1.2zm-1-.8v-.4C3 11.1 4.1 10 5.5 10h5c1.4 0 2.5 1.1 2.5 2.5v.4c1.2-1.3 2-3 2-4.9 0-3.9-3.1-7-7-7S1 4.1 1 8c0 1.9.8 3.6 2 4.9zM8 16c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"></path><path d="M8 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 1C6.3 9 5 7.7 5 6s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"></path></svg> -->
             <!--<svg style="fill:#ffffff;" width="14" height="16" viewBox="0 0 14 16"><path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path></svg> -->
                 </button></a>
+        </div>
+
     </div>
     <div id="menu" class="navside">
             <a href="#" class="close" onclick="closeSlideMenu()">
                     <svg width="35" height="35" viewBox="0 0 20 20"><path d="M10 9.293l4.146-4.147.708.708L10.707 10l4.147 4.146-.708.708L10 10.707l-4.146 4.147-.708-.708L9.293 10 5.146 5.854l.708-.708L10 9.293z"></path></svg>
                 </a>
-            <a class="logo_dark" href="#home" style=""><img src="assets/img/SAAQ_logo-dark.png" style="max-height: 53px; height:20%;"alt=""></a>
+            <a class="logo_dark" href="#home"><img src="assets/img/SAAQ_logo-dark.png" style="max-height: 53px; height:20%;"alt=""></a>
             <a class="sideNavItem active" href="index.html">Espace client</a>
             <button class="dropdown-btn " onclick="window.location.href='index.html'">Profile <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
             <div class="dropdown-container">
-                    <a class="sideNavItem sideNavItem-Sub" href="#">Infos personnelles</a>
+                    <a class="sideNavItem sideNavItem-Sub" href="#">Gérer mes alertes</a>
                     <a class="sideNavItem sideNavItem-Sub" href="#">Préférences de communication</a>
-                    <a class="sideNavItem sideNavItem-Sub" href="#">Documents électroniques</a>
             </div>
-        
-            <a class="sideNavItem" href="#">Nofications <span  style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">2</span></a>
+
+            <a class="sideNavItem" href="#">Notifications <span  style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">2</span></a>
             <a class="sideNavItem" href="boiteOlettre.html">Messages <span style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">6</span></a>
-        
+
             <button class="dropdown-btn">Dossier de conduite <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
             <div class="dropdown-container">
                 <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de conduite de véhicules lourds</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de propriètaire exploitant véhicules lourds</a>
-            </div>                
+            </div>
             <a class="sideNavItem" href="#">Rendez-vous</a>
-        
-            <a class="sideNavItem" href="#">Factures</a>
-        
-            <button class="dropdown-btn">Mes véhicules  
+
+            <button class="dropdown-btn">Factures <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Prélèvements bancaires automatiques</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Coordonnées bancaires</a>
+            </div>
+
+            <button class="dropdown-btn">Mes véhicules
             <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
             </button>
             <div class="dropdown-container">
@@ -66,36 +74,44 @@
                 <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier le droit d'immatriculer un véhicule</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Rapport vérification mécanique</a>
-                <a class="sideNavItem sideNavItem-Sub" href="#">Inscrire un véhicule au programme PEP</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Véhicules PEP</a>
             </div>
-        
-            <button class="dropdown-btn">Mes plaques d'immatriculation <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+
+            <button class="dropdown-btn">Mes plaques d'immatriculations<span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
             <div class="dropdown-container">
-                <a class="sideNavItem sideNavItem-Sub" href="#">Immatriculer un véhicules</a>
                 <a class="sideNavItem" href="#">Annuler ou remplacer une plaque</a>
-                <a class="sideNavItem" href="#">Plaque personnalisée</a>
+                <a class="sideNavItem" href="#">Demander une plaque personnalisée</a>
                 <a class="sideNavItem" href="#">Vérifier le droit d'immatriculer</a>
             </div>
-            
+
             <a class="sideNavItem" href="#">Comportement</a>
-        
-            <button class="dropdown-btn active" onclick="window.location.href='permis.html'">Mes permis <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
-            <div class="dropdown-container" style="display: block;">
+
+            <button class="dropdown-btn  active" onclick="window.location.href='permis.html'">Mes permis <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
                 <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer de permis</a>
-                <a class="sideNavItem sideNavItem-Sub active" href="annuler-permis-1.html">Annuler un permis ou une classe de permis</a>
+                <a class="sideNavItem sideNavItem-Sub" href="annuler-permis-1.html">Annuler un permis ou une classe de permis</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier un permis de conduire</a>
             </div>
-        
+
+            <button class="dropdown-btn" onclick="window.location.href='#'">Demande d'information <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Historique de propriété</a>
+            </div>
+
+
             <button class="dropdown-btn" onclick="window.location.href='#'">Informations médicales <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
             <div class="dropdown-container">
                 <a class="sideNavItem sideNavItem-Sub" href="#">Vignette de stationnement</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Demander une vignette de stationnement</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer une vignette de stationnement</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Ajouter un rapport médical</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Demander un délais supplémentaire</a>
             </div>
-        
+
+            <a class="sideNavItem" href="#">Déconnexion</a>
+
         </div>
-        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        
+
 
     <div id="mainbody">
         <div class="bx--grid" id="main-content">
@@ -105,7 +121,7 @@
                     <br />
                     <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
                         <div class="bx--breadcrumb-item">
-                            <a href="index.html" class="bx--link">Mon Espace Client</a>
+                          <a href="index.html" class="bx--link">Espace client</a>
                         </div>
                         <div class="bx--breadcrumb-item">
                             <a href="permis.html" class="bx--link">Mes permis</a>
@@ -173,46 +189,45 @@
                     <br><br>
                     <h4>Montant à payer</h4>
                     <br>
-                    <p class="type-caption-omega">L'annulation des classes professionelles (classes 1,2,3,4A et 4C) à la suite d'une demande de la SAAQ de passer yb examen médical est sans frais.</p>
+                    <p class="type-caption-omega">L'annulation des classes professionelles (classes 1,2,3,4A et 4B) à la suite d'une demande de la SAAQ de passer un examen médical est sans frais.</p>
                     <br><br><br><br><br><br><br><br><br><br>
                 </div>
-                
+
             </div>
 
 
 <!--  Footer sticky****************************************************************************************************************************** -->
 
         <div class="bx--col-xs-12">
-                <div data-modal id="modal-cancel" class="bx--modal" tabindex="-1">
-                    <div class="bx--modal-container">
-                        <div class="bx--modal-header">
-                        <p class="bx--modal-header__label bx--type-delta">Optional label</p>
-                        <p class="bx--modal-header__heading bx--type-beta">Êtes vous sur de vouloir annuler cette transaction?</p>
-                        <button class="bx--modal-close" type="button" data-modal-close aria-label="close modal">
-                            <svg class="bx--modal-close__icon" width="10" height="10" viewBox="0 0 10 10" fill-rule="evenodd">
-                            <title>Close Modal</title>
-                            <path d="M9.8 8.6L8.4 10 5 6.4 1.4 10 0 8.6 3.6 5 .1 1.4 1.5 0 5 3.6 8.6 0 10 1.4 6.4 5z"></path>
-                            </svg>
-                        </button>
-                        </div>
-                    
-                        <div class="bx--modal-content">
-                        <p>En annulant cetter transaction, vous predrez toutes les informations inscrites jusqu'à présent. 
-                            À tout moment, vous pourrez recommencer la transaction. 
-                        </p>
-                        </div>
-                    
-                        <div class="bx--modal-footer">
-                        <button class="bx--btn bx--btn--secondary" type="button" data-modal-close data-modal-primary-focus>Non. Je souhaite continuer la transaction</button>
-                        <button class="bx--btn bx--btn--danger" type="button" onclick="window.location.href='index.html'" >Oui. Je souhaite annuler la transaction</button>
-                        </div>
-                    </div> 
+            <div data-modal id="modal-cancel" class="bx--modal" tabindex="-1">
+                <div class="bx--modal-container">
+                    <div class="bx--modal-header">
+                    <p class="bx--modal-header__label bx--type-delta">Annuler la transaction</p>
+                    <p class="bx--modal-header__heading bx--type-beta">Êtes vous sur de vouloir annuler cette transaction?</p>
+                    <button class="bx--modal-close" type="button" data-modal-close aria-label="close modal">
+                        <svg class="bx--modal-close__icon" width="10" height="10" viewBox="0 0 10 10" fill-rule="evenodd">
+                        <title>Close Modal</title>
+                        <path d="M9.8 8.6L8.4 10 5 6.4 1.4 10 0 8.6 3.6 5 .1 1.4 1.5 0 5 3.6 8.6 0 10 1.4 6.4 5z"></path>
+                        </svg>
+                    </button>
+                    </div>
+
+                    <div class="bx--modal-content">
+                    <p>En annulant cetter transaction, vous predrez toutes les informations inscrites jusqu'à présent.
+                        À tout moment, vous pourrez recommencer la transaction.
+                    </p>
+                    </div>
+
+                    <div class="bx--modal-footer">
+                    <button class="bx--btn bx--btn--secondary" type="button">Annuler</button>
+                    <button class="bx--btn bx--btn--danger" type="button" data-modal-close data-modal-primary-focus onclick="window.location.href='index.html'" >Confirmer</button>
+                    </div>
                 </div>
+            </div>
                 <div id="additionalContent" class="supfooter">
                         <div >
-                                <p class="bx--type-zeta" style="margin-left:1em;margin-top:0.25em;">Pour plus d’information :
-                                        <a href="https://saaq.gouv.qc.ca/immatriculation/remiser-deremiser-mettre-rancart/" class="bx--link"> Remiser un véhicule, le déremiser ou le mettre au rancart</a>
-                                </p>
+                                <p class="bx--type-zeta">Pour plus d’information :
+<a href="https://saaq.gouv.qc.ca/permis-de-conduire/annuler-permis/" class="bx--link"><span style="font-weight: normal;">Annuler une classe ou un permis</span></a>                                </p>
                         </div>
                     </div>
                 <div class="footer">
@@ -227,13 +242,13 @@
                     </div>
                 </div>
             </div>
-        
+
         <br><br><br>
     </div>
 
 <!-- ****************************************************************************************************************************** -->
 
-            
+
             <div class="bx--row">
                 <div class="bx--col-xs-12">
                     <!-- <p style="margin-left:1em;margin-top:1em;">
@@ -257,13 +272,13 @@
                                       </svg>
                                     </button>
                                   </div>
-                              
+
                                   <div class="bx--modal-content">
-                                    <p>En annulant cetter transaction, vous predrez toutes les informations inscrites jusqu'à présent. 
-                                        À tout moment, vous pourrez recommencer la transaction. 
+                                    <p>En annulant cetter transaction, vous predrez toutes les informations inscrites jusqu'à présent.
+                                        À tout moment, vous pourrez recommencer la transaction.
                                     </p>
                                   </div>
-                              
+
                                   <div class="bx--modal-footer">
                                     <button class="bx--btn bx--btn--secondary" type="button" data-modal-close>Non. Je souhaite continuer la transaction</button>
                                     <button class="bx--btn bx--btn--primary" type="button" onclick="window.location.href='notif.html'" data-modal-primary-focus>Oui. Je souhaite annuler la transaction</button>
@@ -292,7 +307,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="../css-js/saaq-components.js"></script>
+    <script src="css-js/saaq-components.js"></script>
     <script>
             function openSlideMenu(){
                 // document.getElementById('mainbody').style.marginLeft = '0';
@@ -301,8 +316,8 @@
                 document.getElementById('main-content').style.paddingRight = '0px';
                 document.getElementById('backStepBtn').style.paddingLeft = '275px';
                 document.getElementById('additionalContent').style.paddingLeft = '280px';
-                
-                
+
+
             }
             function closeSlideMenu(){
                 document.getElementById('menu').style.width = '0';
@@ -310,22 +325,22 @@
                 document.getElementById('mainbody').style.marginLeft = '5%';
                 document.getElementById('main-content').style.paddingRight = '25px';
                 document.getElementById('backStepBtn').style.paddingLeft = '10%';
-                 document.getElementById('additionalContent').style.paddingLeft = '10%';       
+                 document.getElementById('additionalContent').style.paddingLeft = '10%';
             }
 
-            
-    </script>  
+
+    </script>
     <!-- side nav scripts -->
     <script>
-    
+
     function  permisSelectionListener(){
         document.getElementById("classesOption").removeAttribute('disabled');
         document.getElementById("permisOption").removeAttribute('disabled');
     }
-    
+
     </script>
-    
-    
+
+
 
 </body>
 
