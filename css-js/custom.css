@@ -128,7 +128,7 @@ right: 0px;
     transition:0.4s;
     border-left: 4px solid #007575;
 }
-.navside a.sideNavItem-Sub.active{
+.navside a.sideNavItem.sideNavItem-Sub.active{
     color:#007575;
     transition:0.4s;
     border-left: 8px solid #66acac;
