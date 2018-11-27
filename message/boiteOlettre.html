@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>SAAQClic - Boîte au lettres</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css-js/saaq-components.css">
+    <link rel="stylesheet" href="css-js/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+var inbox_data = [
+    {title:"Title goes here", desc:"Description goes here", date:"DD/MM/YYYY", pill:["unread","marked"],action:"< LINK GOES HERE >"},
+    {title:"Title goes here", desc:"Description goes here", date:"DD/MM/YYYY", pill:["unread","marked"],action:"< LINK GOES HERE >"},
+    {title:"Title goes here", desc:"Description goes here", date:"DD/MM/YYYY", pill:["unread","marked"],action:"< LINK GOES HERE >"}
+];
+</script>
+
+</head>
+
+<body>
+    
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="topnav">
+        <a href="#" class="open" onclick="openSlideMenu()">
+                <svg width="20" height="14"  style="fill:#007575;" viewBox="0 0 20 14"><path d="M0 0h20v2H0zm0 6h20v2H0zm0 6h20v2H0z"></path></svg>
+            </a>
+    <a class="logo_light" href="index.html" ><img src="assets/img/SAAQ_logo-light.png" style="max-height: 53px; height:20%;"alt=""></a>
+    <!-- <a href="#" style="float:right;"><button class="bx--btn bx--btn--primary" onclick="window.location.href='boiteOlettre.html'"
+        style="margin:8px;" type="button">Boite aux lettres  <svg style="fill:#ffffff;" width="16" height="11" viewBox="0 0 16 11">
+                <path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path>
+            </svg></button></a> -->
+    <div class="top--nav-right"  style="float:right; padding-right:10%;">
+        <p style="padding-top: 25px;">Bonjour Chris, bienvenue a la SAAQ</p>
+        <a href="#about"><button class="bx--btn bx--btn--primary" onclick="window.location.href='#'" style="margin:8px;" type="button">
+            <svg width="20" height="20" style="fill:#fff;" viewBox="0 0 20 20"><path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-5 8H4v-2.48a4.5 4.5 0 0 1 4.5-4.5l3.022.014a4.5 4.5 0 0 1 4.478 4.5V18h-1v-2.466a3.5 3.5 0 0 0-3.483-3.5l-3-.015A3.504 3.504 0 0 0 5 15.52V18z"></path></svg>
+            <!-- <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 13.7c1.1.8 2.5 1.3 4 1.3s2.9-.5 4-1.3v-1.2c0-.8-.7-1.5-1.5-1.5h-5c-.8 0-1.5.7-1.5 1.5v1.2zm-1-.8v-.4C3 11.1 4.1 10 5.5 10h5c1.4 0 2.5 1.1 2.5 2.5v.4c1.2-1.3 2-3 2-4.9 0-3.9-3.1-7-7-7S1 4.1 1 8c0 1.9.8 3.6 2 4.9zM8 16c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"></path><path d="M8 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 1C6.3 9 5 7.7 5 6s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"></path></svg> -->
+        <!--<svg style="fill:#ffffff;" width="14" height="16" viewBox="0 0 14 16"><path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path></svg> -->
+            </button></a>
+    </div>
+    
+</div>
+
+
+<div id="menu" class="navside">
+    <a href="#" class="close" onclick="closeSlideMenu()">
+            <svg width="35" height="35" viewBox="0 0 20 20"><path d="M10 9.293l4.146-4.147.708.708L10.707 10l4.147 4.146-.708.708L10 10.707l-4.146 4.147-.708-.708L9.293 10 5.146 5.854l.708-.708L10 9.293z"></path></svg>
+        </a>
+    <a class="logo_dark" href="index.html"><img src="assets/img/SAAQ_logo-dark.png" style="max-height: 53px; height:20%;"alt=""></a>
+    <a class="sideNavItem" href="index.html">Espace client</a>
+    <button class="dropdown-btn " onclick="window.location.href='index.html'">Profile <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+            <a class="sideNavItem sideNavItem-Sub" href="#">Gérer mes alertes</a>
+            <a class="sideNavItem sideNavItem-Sub" href="#">Préférences de communication</a>
+    </div>
+
+    <a class="sideNavItem" href="#">Notifications <span  style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">3</span></a>
+    <a class="sideNavItem active" href="boiteOlettre.html">Messages <span style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">1</span></a>
+
+    <button class="dropdown-btn">Dossier de conduite <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de conduite de véhicules lourds</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de propriètaire exploitant véhicules lourds</a>
+    </div>
+    <a class="sideNavItem" href="#">Rendez-vous</a>
+
+    <button class="dropdown-btn">Factures <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Prélèvements bancaires automatiques</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Coordonnées bancaires</a>
+    </div>
+
+    <button class="dropdown-btn">Mes véhicules
+    <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
+    </button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Déremiser, remiser ou mettre au rancart</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Achat & vente d'un véhicule</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier le droit d'immatriculer un véhicule</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Rapport vérification mécanique</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Véhicules PEP</a>
+    </div>
+
+    <button class="dropdown-btn">Mes plaques d'immatriculations<span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem" href="#">Annuler ou remplacer une plaque</a>
+        <a class="sideNavItem" href="#">Demander une plaque personnalisée</a>
+        <a class="sideNavItem" href="#">Vérifier le droit d'immatriculer</a>
+    </div>
+
+    <a class="sideNavItem" href="#">Comportement</a>
+
+    <button class="dropdown-btn" onclick="window.location.href='permis.html'">Mes permis <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer de permis</a>
+        <a class="sideNavItem sideNavItem-Sub active" href="annuler-permis-1.html">Annuler un permis ou une classe de permis</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier un permis de conduire</a>
+    </div>
+
+    <button class="dropdown-btn" onclick="window.location.href='#'">Demande d'information <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Historique de propriété</a>
+    </div>
+
+
+    <button class="dropdown-btn" onclick="window.location.href='#'">Informations médicales <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+    <div class="dropdown-container">
+        <a class="sideNavItem sideNavItem-Sub" href="#">Vignette de stationnement</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Demander une vignette de stationnement</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer une vignette de stationnement</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Ajouter un rapport médical</a>
+        <a class="sideNavItem sideNavItem-Sub" href="#">Demander un délais supplémentaire</a>
+    </div>
+
+    <a class="sideNavItem" href="#">Déconnexion</a>
+
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <div id="mainbody">
+            <div class="bx-container">
+                <div class="bx--grid" id="main-content">
+                    <br />
+                    <br />
+                    <!-- Title  *********************************************************************************************************************** -->
+                    <div class="bx--row">
+                        <div class="bx--col-md-6 ">                 
+                            <br>
+                            <h1>Boite aux lettres</h1>
+                            <br>
+                        </div>
+                        <div class="bx--col-xs-6">
+                            <br>
+                        </div>
+                    </div>
+    
+                    <!-- Mailbox Header  ************************************************************************************************************* -->
+                    <div class="bx--row">
+                        <div class="bx--col-xs-2 ">
+                            <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Épingler</button>
+                        </div>
+                        <div class="bx--col-xs-10   " >
+                            <button class="bx--btn bx--btn--sm bx--btn--primary" style="float:right; margin-left: 1rem;" onclick="window.location.href='#.html'" type="button">Transmettre un fichier</button>
+                            <div data-content-switcher id="my-content-switcher" class="bx--content-switcher" style="float:right;">
+                                <button class="bx--content-switcher-btn  bx--btn--sm bx--content-switcher--selected" data-target=".demo--panel--opt-1">Tous (x)</button>
+                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-2">Non lus (x)</button>
+                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Lus (x)</button>
+                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-4">Épinglés (x)</button>
+                            </div>
+                            
+                        </div>
+                        <br><br>
+                    </div>
+    
+                    <script>
+                        function initInboxItems() {
+                            var str_header = `<div class="bx--col-xs-12">
+                                <div class="bx--module bx--module--double">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header" style="display: block;">`;
+                            var str_overflow = `<div class="bx--overflow-menu-container">
+                                                <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                        <g fill-rule="evenodd">
+                                                        <circle cx="1.5" cy="1.5" r="1.5" />
+                                                        <circle cx="1.5" cy="7.5" r="1.5" />
+                                                        <circle cx="1.5" cy="13.5" r="1.5" />
+                                                        </g>
+                                                    </svg>
+                                                    <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                        role="menu" aria-label="Overflow">
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                            data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 2</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 3</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 4</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            tabindex="-1" >Disabled</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Danger option</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>`;
+    
+                            var str_checkbox = `<fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                    <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                    <!-- input + label -->
+                                    <div class="bx--form-item bx--checkbox-wrapper" >
+                                        <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                        <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                            de l'Électrification des transports</strong>
+                                        </label>
+                                    </div>
+                                </fieldset>`;
+    
+                            var str_date = `<p class="bx--type-caption">2020 / 01 / 01</p>
+                                                <br>`;
+    
+                            var str_desc = `<p>Change de dates pour la période de dégel de la zone 2</p>
+                                        </div>`;
+                                        
+                            var str_action = `<div class="bx--module__content">
+                                                <div class="bx--col-xs-6">
+                                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <br>
+                                </div>`;
+    
+                        }
+    
+                        function inboxItemElement(temp) {
+                            var start = `
+                            <div class="bx--col-xs-12">
+                                <div class="bx--module bx--module--double">
+                                    <div class="bx--module__inner">`;
+                            var end = `
+                            </div>
+                                </div>
+                                    </div>`;
+                            return start+temp+end;
+                        }
+    
+    
+                    </script>
+    
+                    
+                    <div class="bx--row" id="inbox-container">
+                        <div class="bx--col-xs-12">
+                            <br><br>
+                            <h3 class="bx--type-gamma">Today</h3>
+                            <br>
+                        </div>
+                        <div class="bx--col-xs-12">
+                            <div class="bx--module">
+                                <div class="bx--module__inner">
+                                    <div class="bx--module__header" style="display: block;">
+                                        <div style="float: right;">
+                                            <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                    <g fill-rule="evenodd">
+                                                    <circle cx="1.5" cy="1.5" r="1.5" />
+                                                    <circle cx="1.5" cy="7.5" r="1.5" />
+                                                    <circle cx="1.5" cy="13.5" r="1.5" />
+                                                    </g>
+                                                </svg>
+                                                <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                    role="menu" aria-label="Overflow">
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                        data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Option 2</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Option 3</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Option 4</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        tabindex="-1" >Disabled</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Danger option</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                            <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                                <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                                <!-- input + label -->
+                                                <div class="bx--form-item bx--checkbox-wrapper" >
+                                                    <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                    <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                        de l'Électrification des transports</strong>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                            <p class="bx--type-caption">2020 / 01 / 01</p>
+                                            <br>
+                                            <p>Change de dates pour la période de dégel de la zone 2</p>
+                                    </div> 
+                                    
+                                    <div class="bx--module__content">
+                                        <div class="bx--col-xs-6">
+                                            <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="bx--col-xs-12">
+                                <div class="bx--module ">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header" style="display: block;">
+                                            <div class="bx--overflow-menu-container">
+                                                <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                        <g fill-rule="evenodd">
+                                                        <circle cx="1.5" cy="1.5" r="1.5" />
+                                                        <circle cx="1.5" cy="7.5" r="1.5" />
+                                                        <circle cx="1.5" cy="13.5" r="1.5" />
+                                                        </g>
+                                                    </svg>
+                                                    <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                        role="menu" aria-label="Overflow">
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                            data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 2</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 3</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 4</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            tabindex="-1" >Disabled</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Danger option</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                                <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                                    <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                                    <!-- input + label -->
+                                                    <div class="bx--form-item bx--checkbox-wrapper" >
+                                                        <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                        <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                            de l'Électrification des transports</strong>
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <p class="bx--type-caption">2020 / 01 / 01</p>
+                                                <br>
+                                                <p>Change de dates pour la période de dégel de la zone 2</p>
+                                        </div> 
+                                        
+                                        <div class="bx--module__content">
+                                            <div class="bx--col-xs-6">
+                                                <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                        </div>
+                        <div class="bx--col-xs-12">
+                                <div class="bx--module">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header" style="display: block;">
+                                            <div style="float: right;">
+                                                <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                        <g fill-rule="evenodd">
+                                                        <circle cx="1.5" cy="1.5" r="1.5" />
+                                                        <circle cx="1.5" cy="7.5" r="1.5" />
+                                                        <circle cx="1.5" cy="13.5" r="1.5" />
+                                                        </g>
+                                                    </svg>
+                                                    <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                        role="menu" aria-label="Overflow">
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                            data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 2</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Danger option</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
+                                                <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                                    <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                                    <!-- input + label -->
+                                                    <div class="bx--form-item bx--checkbox-wrapper" >
+                                                        <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                        <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                            de l'Électrification des transports</strong>
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <p class="bx--type-caption"><span class="bx--tag bx--tag--ibm">Non lu</span>   <span class="bx--tag bx--tag--third-party">Épinglé</span>  2020 / 01 / 01</p>
+                                                <br>
+                                                <p>Change de dates pour la période de dégel de la zone 2</p>
+                                        </div> 
+                                        
+                                        <div class="bx--module__content">
+                                            <div class="bx--col-xs-6">
+                                                <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+        <!-- *********************************************************************************************** -->
+                        <div class="bx--col-xs-12">
+                                <br><br>
+                                <h3 class="bx--type-gamma">Mois en cours</h3>
+                                <br>
+                        </div>
+                        <div class="bx--col-xs-12">
+                            <div class="bx--module">
+                                <div class="bx--module__inner">
+                                    <div class="bx--module__header" style="display: block;">
+                                        <div style="float: right;">
+                                            <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                    <g fill-rule="evenodd">
+                                                    <circle cx="1.5" cy="1.5" r="1.5" />
+                                                    <circle cx="1.5" cy="7.5" r="1.5" />
+                                                    <circle cx="1.5" cy="13.5" r="1.5" />
+                                                    </g>
+                                                </svg>
+                                                <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                    role="menu" aria-label="Overflow">
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                        data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Option 2</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Option 3</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Option 4</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        tabindex="-1" >Disabled</button>
+                                                    </li>
+                                                    <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                    role="presentation">
+                                                    <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                        >Danger option</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                            <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                                <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                                <!-- input + label -->
+                                                <div class="bx--form-item bx--checkbox-wrapper" >
+                                                    <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                    <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                        de l'Électrification des transports</strong>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                            <p class="bx--type-caption">2020 / 01 / 01</p>
+                                            <br>
+                                            <p>Change de dates pour la période de dégel de la zone 2</p>
+                                    </div> 
+                                    
+                                    <div class="bx--module__content">
+                                        <div class="bx--col-xs-6">
+                                            <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="bx--col-xs-12">
+                                <div class="bx--module ">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header" style="display: block;">
+                                            <div class="bx--overflow-menu-container">
+                                                <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                        <g fill-rule="evenodd">
+                                                        <circle cx="1.5" cy="1.5" r="1.5" />
+                                                        <circle cx="1.5" cy="7.5" r="1.5" />
+                                                        <circle cx="1.5" cy="13.5" r="1.5" />
+                                                        </g>
+                                                    </svg>
+                                                    <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                        role="menu" aria-label="Overflow">
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                            data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 2</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 3</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 4</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            tabindex="-1" >Disabled</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Danger option</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                                <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                                    <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                                    <!-- input + label -->
+                                                    <div class="bx--form-item bx--checkbox-wrapper" >
+                                                        <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                        <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                            de l'Électrification des transports</strong>
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <p class="bx--type-caption">2020 / 01 / 01</p>
+                                                <br>
+                                                <p>Change de dates pour la période de dégel de la zone 2</p>
+                                        </div> 
+                                        
+                                        <div class="bx--module__content">
+                                            <div class="bx--col-xs-6">
+                                                <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                        </div>
+                        <div class="bx--col-xs-12">
+                                <div class="bx--module">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header" style="display: block;">
+                                            <div style="float: right;">
+                                                <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                        <g fill-rule="evenodd">
+                                                        <circle cx="1.5" cy="1.5" r="1.5" />
+                                                        <circle cx="1.5" cy="7.5" r="1.5" />
+                                                        <circle cx="1.5" cy="13.5" r="1.5" />
+                                                        </g>
+                                                    </svg>
+                                                    <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                        role="menu" aria-label="Overflow">
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                            data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Option 2</button>
+                                                        </li>
+                                                        <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                        role="presentation">
+                                                        <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                            >Danger option</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
+                                                <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                                    <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                                    <!-- input + label -->
+                                                    <div class="bx--form-item bx--checkbox-wrapper" >
+                                                        <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                        <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                            de l'Électrification des transports</strong>
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <p class="bx--type-caption"><span class="bx--tag bx--tag--ibm">Non lu</span>   <span class="bx--tag bx--tag--third-party">Épinglé</span>  2020 / 01 / 01</p>
+                                                <br>
+                                                <p>Change de dates pour la période de dégel de la zone 2</p>
+                                        </div> 
+                                        
+                                        <div class="bx--module__content">
+                                            <div class="bx--col-xs-6">
+                                                <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+    
+                        <br><br>
+                        <h3 class="bx--type-gamma">Mois précédents</h3>
+                        <br>
+                </div>
+                <div class="bx--col-xs-12">
+                    <div class="bx--module">
+                        <div class="bx--module__inner">
+                            <div class="bx--module__header" style="display: block;">
+                                <div style="float: right;">
+                                    <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                            <g fill-rule="evenodd">
+                                            <circle cx="1.5" cy="1.5" r="1.5" />
+                                            <circle cx="1.5" cy="7.5" r="1.5" />
+                                            <circle cx="1.5" cy="13.5" r="1.5" />
+                                            </g>
+                                        </svg>
+                                        <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                            role="menu" aria-label="Overflow">
+                                            <li class="bx--overflow-menu-options__option"
+                                            role="presentation">
+                                            <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                            </li>
+                                            <li class="bx--overflow-menu-options__option"
+                                            role="presentation">
+                                            <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                >Option 2</button>
+                                            </li>
+                                            <li class="bx--overflow-menu-options__option"
+                                            role="presentation">
+                                            <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                >Option 3</button>
+                                            </li>
+                                            <li class="bx--overflow-menu-options__option"
+                                            role="presentation">
+                                            <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                >Option 4</button>
+                                            </li>
+                                            <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                            role="presentation">
+                                            <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                tabindex="-1" >Disabled</button>
+                                            </li>
+                                            <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                            role="presentation">
+                                            <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                >Danger option</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                    <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                        <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                        <!-- input + label -->
+                                        <div class="bx--form-item bx--checkbox-wrapper" >
+                                            <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                            <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                de l'Électrification des transports</strong>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <p class="bx--type-caption">2020 / 01 / 01</p>
+                                    <br>
+                                    <p>Change de dates pour la période de dégel de la zone 2</p>
+                            </div> 
+                            
+                            <div class="bx--module__content">
+                                <div class="bx--col-xs-6">
+                                    <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="bx--col-xs-12">
+                        <div class="bx--module ">
+                            <div class="bx--module__inner">
+                                <div class="bx--module__header" style="display: block;">
+                                    <div class="bx--overflow-menu-container">
+                                        <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                <g fill-rule="evenodd">
+                                                <circle cx="1.5" cy="1.5" r="1.5" />
+                                                <circle cx="1.5" cy="7.5" r="1.5" />
+                                                <circle cx="1.5" cy="13.5" r="1.5" />
+                                                </g>
+                                            </svg>
+                                            <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                role="menu" aria-label="Overflow">
+                                                <li class="bx--overflow-menu-options__option"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                    data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    >Option 2</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    >Option 3</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    >Option 4</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--disabled"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    tabindex="-1" >Disabled</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    >Danger option</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                        <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                            <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                            <!-- input + label -->
+                                            <div class="bx--form-item bx--checkbox-wrapper" >
+                                                <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                    de l'Électrification des transports</strong>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                        <p class="bx--type-caption">2020 / 01 / 01</p>
+                                        <br>
+                                        <p>Change de dates pour la période de dégel de la zone 2</p>
+                                </div> 
+                                
+                                <div class="bx--module__content">
+                                    <div class="bx--col-xs-6">
+                                        <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                </div>
+                <div class="bx--col-xs-12">
+                        <div class="bx--module">
+                            <div class="bx--module__inner">
+                                <div class="bx--module__header" style="display: block;">
+                                    <div style="float: right;">
+                                        <div data-overflow-menu tabindex="0" aria-label="Overflow" class="bx--overflow-menu" role="button" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <svg aria-hidden="true" class="bx--overflow-menu__icon" width="3" height="15" viewBox="0 0 3 15">
+                                                <g fill-rule="evenodd">
+                                                <circle cx="1.5" cy="1.5" r="1.5" />
+                                                <circle cx="1.5" cy="7.5" r="1.5" />
+                                                <circle cx="1.5" cy="13.5" r="1.5" />
+                                                </g>
+                                            </svg>
+                                            <ul class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" data-floating-menu-direction="bottom"
+                                                role="menu" aria-label="Overflow">
+                                                <li class="bx--overflow-menu-options__option"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem"  title="An example option that is really long to show what should be done to handle long text" 
+                                                    data-floating-menu-primary-focus>An example option that is really long to show what should be done to handle long text</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    >Option 2</button>
+                                                </li>
+                                                <li class="bx--overflow-menu-options__option bx--overflow-menu-options__option--danger"
+                                                role="presentation">
+                                                <button class="bx--overflow-menu-options__btn" role="menuitem" 
+                                                    >Danger option</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                        <fieldset class="bx--fieldset" style="margin-bottom:1rem">
+                                            <!-- <legend class="bx--label">Checkbox (input + label)</legend> -->
+                                            <!-- input + label -->
+                                            <div class="bx--form-item bx--checkbox-wrapper" >
+                                                <input id="bx--checkbox-new" class="bx--checkbox" type="checkbox" value="new" name="checkbox" unchecked>
+                                                <label for="bx--checkbox-new" class="bx--checkbox-label"><strong>Ministre des transports, de la Mobilité durable et
+                                                    de l'Électrification des transports</strong>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                        <p class="bx--type-caption"><span class="bx--tag bx--tag--ibm">Non lu</span>   <span class="bx--tag bx--tag--third-party">Épinglé</span>  2020 / 01 / 01</p>
+                                        <br>
+                                        <p>Change de dates pour la période de dégel de la zone 2</p>
+                                </div> 
+                                
+                                <div class="bx--module__content">
+                                    <div class="bx--col-xs-6">
+                                        <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Consulter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                        <div class="bx--col-xs-12">
+                            <div class="bx--pagination" data-pagination>
+                                <div class="bx--pagination__left">
+                                    <div class="bx--select">
+                                        <select id="select-id-pagination" class="bx--select-input" data-items-per-page>
+                                            <option class="bx--select-option" value="10" selected>10</option>
+                                            <option class="bx--select-option" value="20">20</option>
+                                            <option class="bx--select-option" value="30">30</option>
+                                            <option class="bx--select-option" value="40">40</option>
+                                            <option class="bx--select-option" value="50">50</option>
+                                        </select>
+                                        <svg class="bx--select__arrow" width="10" height="5" viewBox="0 0 10 5">
+                                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                        <span class="bx--pagination__text">Afficher&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                        <span class="bx--pagination__text">
+                                        <span data-displayed-item-range>1 à 10</span> sur
+                                        <span data-total-items>X</span></span>
+                                </div>
+                                <div class="bx--pagination__right">
+                                    <span class="bx--pagination__text">
+                                    <span data-displayed-page-number>1</span> de
+                                    <span data-total-pages>4</span> pages</span>
+                                    <button class="bx--pagination__button bx--pagination__button--backward" data-page-backward aria-label="Backward button">
+                                    <svg class="bx--pagination__button-icon" width="7" height="12" viewBox="0 0 7 12">
+                                        <path fill-rule="nonzero" d="M1.45 6.002L7 11.27l-.685.726L0 6.003 6.315 0 7 .726z"/>
+                                    </svg>
+                                    </button>
+                                    <label for="page-number-input" class="bx--visually-hidden">Champs numerique de la page</label>
+                                    <input id="page-number-input" type="text" class="bx--text-input" placeholder="0" value="1" data-page-number-input>
+                                    <button class="bx--pagination__button bx--pagination__button--forward" data-page-forward aria-label="Forward button">
+                                    <svg class="bx--pagination__button-icon" width="7" height="12" viewBox="0 0 7 12">
+                                        <path fill-rule="nonzero" d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z"/>
+                                    </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <!-- ****************************************************************************************************************************** -->
+    
+                    <!-- Sitcky Footer Action Bar ***************************************************************************************************** -->
+                    <!-- <div class="bx--row">
+                        <div class="bx--col-xs-12">
+                            <p style="margin-left:1em;margin-top:1em;">
+                                <strong>Pour plus d’information :
+                                    <a href="https://saaq.gouv.qc.ca/immatriculation/remiser-deremiser-mettre-rancart/"
+                                        class="bx--link"> Remiser un véhicule, le déremiser ou le mettre au rancart</a>
+                                </strong>
+                                <br><br>
+                            </p>
+                        </div>
+                        <div class="bx--col-xs-12">
+                            <div class="footer">
+                                <div style="float: left;">
+                                    <p style="margin-left:1em;margin-top:1em;">
+                                        <a href="remisage-1.html" class="bx--link">Annuler</a>
+                                    </p>
+                                </div>
+                                <div style="text-align: right">
+                                    <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                                    <button class="bx--btn bx--btn--primary" onclick="window.location.href='remisage-3.html'"
+                                        style="margin:8px;" type="button">Passer à l’étape suivante</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br>
+                    </div> -->
+                <!-- End of div .bx--grid-->
+                    
+            </div>
+        </div>
+        
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="css-js/saaq-components.js"></script>
+    <script>
+
+    </script>
+
+
+
+
+    <script>
+        // Notification Toast
+        $(document).ready(function () {
+            $("#opt-6-error").click(function () {
+                $("#opt-6-error").show();
+            });
+            $("#opt-3-success").click(function () {
+                $("#div1").fadeIn(1500);
+            });
+            $("#opt-6-success").click(function () {
+                $("#div2").fadeIn(1500);
+            });
+            $("#opt-9-success").click(function () {
+                $("#div3").fadeIn(1500);
+            });
+        });
+    </script>
+    <!-- <script>
+    var today = new Date();
+
+
+    function initDatePickers() {
+        var date_picker_1 = document.getElementById("date-picker-1");
+        date_picker_1.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        var date_picker_2 = document.getElementById("date-picker-2");
+        date_picker_2.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+            var date_picker_3 = document.getElementById("date-picker-3");
+        date_picker_3.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        var date_picker_4 = document.getElementById("date-picker-4");
+        date_picker_4.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        var date_picker_6 = document.getElementById("date-picker-6");
+        date_picker_6.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        
+    }
+
+    function getDatePickerInput(e) {
+        var input_date = e.target.value;
+
+        console.log(isDateFutur(input_date.split("/")));
+        if (!isDateFutur(input_date.split("/"))){
+            invalideDateInput(e.target);
+        }
+        else{
+            valideDateInput(e.target);
+        }
+
+    }
+
+    function isDateFutur(input_date) {
+        if (input_date[2] > getCurrentYear()){
+            return true;
+        }
+        else if (input_date[2] == getCurrentYear() && input_date[0] > getCurrentMonth()){
+            return true;
+        }
+        else if (input_date[2] == getCurrentYear() && input_date[0] == getCurrentMonth() && input_date[1] >= getCurrentDay()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function valideDateInput(datePicker) {
+        datePicker.removeAttribute("data-invalid");
+    }
+    function invalideDateInput(datePicker) {
+        datePicker.setAttribute("data-invalid","true");
+    }
+
+    // Return current date :: Day, Month, Year.
+    function getCurrentDay() {
+        var dd = today.getDate();
+        
+        if(dd<10) {
+            dd = '0'+dd
+        }
+        return dd; 
+    }
+    function getCurrentMonth() {
+        var mm = today.getMonth()+1; //January is 0!
+
+        if(mm<10) {
+            mm = '0'+mm
+        } 
+
+        return mm;
+        
+    }
+    function getCurrentYear() {
+        var yyyy = today.getFullYear();
+        return yyyy;
+    }
+
+    initDatePickers();
+
+    </script> -->
+    <script>
+        function openSlideMenu(){
+            document.getElementById('mainbody').style.marginLeft = '0';
+            document.getElementById('menu').style.width = '270px';
+            document.getElementById('main-content').style.paddingLeft = '275px';
+        }
+        function closeSlideMenu(){
+            document.getElementById('menu').style.width = '0';
+            document.getElementById('main-content').style.paddingLeft = '25px';
+            document.getElementById('mainbody').style.marginLeft = '3%';
+        }
+        openSlideMenu();
+    </script>  
+
+
+</body>
+
+</html>

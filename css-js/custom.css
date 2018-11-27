@@ -168,8 +168,6 @@ right: 0px;
     font-size: 0em;
 }
 
-
-
 .slide a{
     color: #000;
     font-size: 2em;
@@ -193,6 +191,14 @@ width: 270px;
     background-color: rgb(228, 228, 228);
     color: rgb(0, 0, 0);
 }
+
+.dropdown-container.expanded{
+    display: block;
+}
+.dropdown-container.collapsed{
+    display: none;
+}
+
 .logo_dark{
     /* background-color: #ffffff; */
     position: absolute;
@@ -239,4 +245,12 @@ width: 270px;
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+
+
+.notification-container{
+    position: fixed;
+    top: 90px;
+    right: 0px;
 }

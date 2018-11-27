@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>SAAQClic - Remiser, déremiser ou mettre au rancart</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../css-js/saaq-components.css">
+    <link rel="stylesheet" href="../../css-js/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <div class="topnav">
+            <a href="#" class="open" onclick="openSlideMenu()">
+                    <svg width="20" height="14"  style="fill:#007575;" viewBox="0 0 20 14"><path d="M0 0h20v2H0zm0 6h20v2H0zm0 6h20v2H0z"></path></svg>
+                </a>
+        <a class="logo_light" href="../../index.html" ><img src="../../assets/img/SAAQ_logo-light.png" style="max-height: 53px; height:20%;"alt=""></a>
+
+        <div class="top--nav-right"  style="float:right; padding-right:10%;">
+          <p style="padding-top: 25px;">Bonjour Anne-Marie</p>
+            <a href="#about"><button class="bx--btn bx--btn--primary" onclick="window.location.href='#'" style="margin:8px;" type="button">
+                <svg width="20" height="20" style="fill:#fff;" viewBox="0 0 20 20"><path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-5 8H4v-2.48a4.5 4.5 0 0 1 4.5-4.5l3.022.014a4.5 4.5 0 0 1 4.478 4.5V18h-1v-2.466a3.5 3.5 0 0 0-3.483-3.5l-3-.015A3.504 3.504 0 0 0 5 15.52V18z"></path></svg>
+                </button></a>
+        </div>
+
+         </div>
+
+        <div id="menu" class="navside">
+            <a href="#" class="close" onclick="closeSlideMenu()">
+                    <svg width="35" height="35" viewBox="0 0 20 20"><path d="M10 9.293l4.146-4.147.708.708L10.707 10l4.147 4.146-.708.708L10 10.707l-4.146 4.147-.708-.708L9.293 10 5.146 5.854l.708-.708L10 9.293z"></path></svg>
+                </a>
+            <a class="logo_dark" href="../../index.html"><img src="../../assets/img/SAAQ_logo-dark.png" style="max-height: 53px; height:20%;"alt=""></a>
+            <a class="sideNavItem" href="../../index.html">Espace client</a>
+            <button class="dropdown-btn " onclick="window.location.href='../../index.html'">Profile <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                    <a class="sideNavItem sideNavItem-Sub" href="#">Gérer mes alertes</a>
+                    <a class="sideNavItem sideNavItem-Sub" href="#">Préférences de communication</a>
+            </div>
+
+            <a class="sideNavItem" href="#">Notifications <span  style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">3</span></a>
+            <a class="sideNavItem" href="../../boiteOlettre.html">Messages <span style="background-color: red; color: #fff;" class="bx--tag bx--tag--ibm">1</span></a>
+
+            <button class="dropdown-btn">Dossier de conduite <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de conduite de véhicules lourds</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Mon dossier de propriètaire exploitant véhicules lourds</a>
+            </div>
+            <a class="sideNavItem" href="#">Rendez-vous</a>
+
+            <button class="dropdown-btn">Factures <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Prélèvements bancaires automatiques</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Coordonnées bancaires</a>
+            </div>
+
+            <button class="dropdown-btn active">Mes véhicules
+            <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
+            </button>
+            <div class="dropdown-container expanded" >
+                <a class="sideNavItem sideNavItem-Sub active" href="#">Déremiser, remiser ou mettre au rancart</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Achat & vente d'un véhicule</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier le droit d'immatriculer un véhicule</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Rapport vérification mécanique</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Véhicules PEP</a>
+            </div>
+
+            <button class="dropdown-btn">Mes plaques d'immatriculations<span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem" href="#">Annuler ou remplacer une plaque</a>
+                <a class="sideNavItem" href="#">Demander une plaque personnalisée</a>
+                <a class="sideNavItem" href="#">Vérifier le droit d'immatriculer</a>
+            </div>
+
+            <a class="sideNavItem" href="#">Comportement</a>
+
+            <button class="dropdown-btn" onclick="window.location.href='../../permis/permis.html'">Mes permis <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container collapsed">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer de permis</a>
+                <a class="sideNavItem sideNavItem-Sub active" href="annuler-permis-1.html">Annuler un permis ou une classe de permis</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier un permis de conduire</a>
+            </div>
+
+            <button class="dropdown-btn" onclick="window.location.href='#'">Demande d'information <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Historique de propriété</a>
+            </div>
+
+
+            <button class="dropdown-btn" onclick="window.location.href='#'">Informations médicales <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
+            <div class="dropdown-container">
+                <a class="sideNavItem sideNavItem-Sub" href="#">Vignette de stationnement</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Demander une vignette de stationnement</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer une vignette de stationnement</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Ajouter un rapport médical</a>
+                <a class="sideNavItem sideNavItem-Sub" href="#">Demander un délais supplémentaire</a>
+            </div>
+
+            <a class="sideNavItem" href="#">Déconnexion</a>
+
+        </div>
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <div id="mainbody">
+                <div class="bx--grid" id="main-content">
+                        
+                        <div class="bx--row">
+                            <div class="bx--col-xs-12 ">
+                                <br />
+                                <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+                                    <div class="bx--breadcrumb-item">
+                                        <a href="../../index.html" class="bx--link">Mon Espace Client</a>
+                                    </div>
+                                    <div class="bx--breadcrumb-item">
+                                        <a href="../vehicule.html" class="bx--link">Véhicules</a>
+                                    </div>
+                                    <div class="bx--breadcrumb-item">
+                                        <a href="remisage-1.html" class="bx--link">Remiser, déremiser ou mettre au rancart</a>
+                                    </div>
+                                    <div class="bx--breadcrumb-item">
+                                    </div>
+                                </nav>
+                                <br>
+                                <h1>Remiser, déremiser ou mettre au rancart</h1>
+                                <br>
+                                <br>
+                                <h4></h4>
+                            </div>
+                        </div>
+
+                        <div class="bx--row">
+                            <div class="bx--col-xs-12">
+                                <ul data-progress data-progress-current class="bx--progress">
+                                    <li class="bx--progress-step bx--progress-step--complete">
+                                        <svg>
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                            <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                                        </svg>
+                                        <p class="bx--progress-label">Sélection</p>
+                                        <span class="bx--progress-line"></span>
+                                    </li>
+                                    <li class="bx--progress-step bx--progress-step--current">
+                                        <svg>
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                            <circle cx="12" cy="12" r="6"></circle>
+                                        </svg>
+                                        <p class="bx--progress-label">Demande</p>
+                                        <span class="bx--progress-line"></span>
+                                    </li>
+                                    <li class="bx--progress-step bx--progress-step--incomplete">
+                                        <svg>
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                        </svg>
+                                        <p class="bx--progress-label">Coût et remboursement</p>
+                                        <span class="bx--progress-line"></span>
+                                    </li>
+                                    <li class="bx--progress-step bx--progress-step--incomplete">
+                                        <svg>
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                        </svg>
+                                        <p class="bx--progress-label">Paiement</p>
+                                        <span class="bx--progress-line"></span>
+                                    </li>
+                                    <li class="bx--progress-step bx--progress-step--incomplete">
+                                        <svg>
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                        </svg>
+                                        <p class="bx--progress-label">Résumé</p>
+                                        <span class="bx--progress-line"></span>
+                                    </li>
+                                    <li class="bx--progress-step bx--progress-step--incomplete">
+                                        <svg>
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                        </svg>
+                                        <p class="bx--progress-label">Confirmation</p>
+                                        <span class="bx--progress-line"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ****************************************************************************************************************************** -->
+                        <div class="bx--row">
+                            <div class="bx--col-xs-12" id="bx--card-1">
+                                <br>
+                                <div class="bx--module bx--module--double">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header">
+                                            <p class="bx--module__title bx--type-alpha">Honda Odyssey 2017 <br> 000 ABC
+                                                #12345678912345678</p>
+                                        </div>
+                                        <div class="bx--module__content" >
+                                            <div data-content-switcher id="my-content-switcher" class="bx--content-switcher">
+                                                <button class="bx--content-switcher-btn  bx--btn--sm bx--content-switcher--selected"
+                                                    data-target=".demo--panel--opt-1">En circulation</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-2">Remisé</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Mettre
+                                                    au rancart</button>
+                                            </div>
+                                            <div class="demo--panel--opt-1" aria-hidden="false">
+                                                <br>
+                                                <p><strong> Le véhicule est actuellement en circulation.</strong></p>
+                                                <br>
+                                                <br>
+                                            </div>
+                                            <div class="demo--panel--opt-2" aria-hidden="true" hidden>
+                                                <br />
+                                                <h3>Vous pouvez remiser le véhicule.</h3>
+                                                <br>
+                                                <p> Remiser un véhicule signifie l’entreposer pour le réutiliser plus tard.
+                                                    Un véhicule remisé ne peut plus circuler
+                                                    sur la route durant la période du remisage. Pour réutiliser le
+                                                    véhicule, une demande de déremisage doit être faite.</p>
+                                                <p>Au moment du remisage, un remboursement de l'immatriculation peut être
+                                                    effectué. Le montant du remboursementr est établi selon la date du
+                                                    remisage et l'exploration de l'immatriculation. Le montant exclut le
+                                                    mois en cours.</p>
+
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-1" class="bx--label">Date de remisage</label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input  type="text" id="date-picker-1" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="demo--panel--opt-3" aria-hidden="true" hidden>
+                                                <br>
+                                                
+                                                <p>Vous pouvez mettre en rancart votre véhicule <br> Véhicule est mis au
+                                                    rancart parce que le propriétaire ne compte plus jamais l'utiliser,
+                                                    souvent parce qu'il est devenu
+                                                    inutilisable, par exemple en cas de perte totale ou de bris majeur.</p>
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-2" class="bx--label">Date de remisage</label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input type="text" id="date-picker-2" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <br><br>
+                                            </div>
+
+                                            <br>
+                                            <a class="bx--link" id="link-1"  >Retirer des véhicules à remiser,
+                                                déremiser ou mettre au rancart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="bx--col-xs-12" id="bx--card-2">
+                                <div class="bx--module bx--module--double">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header">
+                                            <p class="bx--module__title bx--type-alpha">Mercedes E550 2015 <br> A1A B2B -
+                                                #2710264271256392</p>
+                                        </div>
+                                        <div class="bx--module__content">
+                                            <div data-content-switcher id="my-content-switcher" class="bx--content-switcher">
+                                                <button class="bx--content-switcher-btn  bx--btn--sm bx--content-switcher--selected"
+                                                    data-target=".demo--panel--opt-4">En circulation</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-5">Remisé</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-6">Mettre
+                                                    au rancart</button>
+                                            </div>
+                                            <div class="demo--panel--opt-4" aria-hidden="false">
+                                                <br>
+                                                <p><strong> Le véhicule est actuellement en circulation.</strong></p>
+                                                <br>
+                                                <br>
+                                            </div>
+                                            <div class="demo--panel--opt-5" aria-hidden="true" hidden>
+                                                <br />
+                                                <h3>Vous pouvez remiser le véhicule.</h3>
+                                                <br>
+                                                <p> Remiser un véhicule signifie l’entreposer pour le réutiliser plus tard.
+                                                    Un véhicule remisé ne peut plus circuler
+                                                    sur la route durant la période du remisage. Pour réutiliser le
+                                                    véhicule, une demande de déremisage doit être faite.</p>
+                                                <p>Au moment du remisage, un remboursement de l'immatriculation peut être
+                                                    effectué. Le montant du remboursementr est établi selon la date du
+                                                    remisage et l'exploration de l'immatriculation. Le montant exclut le
+                                                    mois en cours.</p>
+
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-3" class="bx--label">Date de remisage</label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input type="text" id="date-picker-3" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                            </div>
+
+                                            <div class="demo--panel--opt-6" aria-hidden="true" hidden>
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-4" class="bx--label">Date de remisage</label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input type="text" id="date-picker-4" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>Vous pouvez mettre en rancart votre véhicule <br> Véhicule est mis au
+                                                    rancart parce que le propriétaire ne compte plus jamais l'utiliser,
+                                                    souvent parce qu'il est devenu
+                                                    inutilisable, par exemple en cas de perte totale ou de bris majeur.</p>
+        \
+
+                                                <br><br>
+                                            </div>
+
+                                            <br>
+                                            <a class="bx--link" id="link-2">Retirer des véhicules à remiser,
+                                                déremiser ou mettre au rancart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="bx--col-xs-12" id="bx--card-3">
+                                <div class="bx--module bx--module--double">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header">
+                                            <p class="bx--module__title bx--type-alpha">Ford Escape 2011 <br> F2E 7V8 -
+                                                #12345678912345678</p>
+                                        </div>
+                                        <div class="bx--module__content">
+                                            <div data-content-switcher id="my-content-switcher" class="bx--content-switcher">
+                                                <button class="bx--content-switcher-btn  bx--btn--sm" data-target=".demo--panel--opt-7">En
+                                                    circulation</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm bx--content-switcher--selected"
+                                                    data-target=".demo--panel--opt-8">Remisé</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-9">Mettre
+                                                    au rancart</button>
+                                            </div>
+                                            <div class="demo--panel--opt-7" aria-hidden="true" hidden>
+                                                <br>
+                                                <p><strong> Le véhicule est actuellement en circulation.</strong></p>
+                                                <br>
+                                                <br>
+                                            </div>
+                                            <div class="demo--panel--opt-8" aria-hidden="false">
+                                                <br>
+                                                <p><strong> Le véhicule est actuellement en remisé.</strong></p>
+                                            </div>
+
+                                            <div class="demo--panel--opt-9" aria-hidden="true" hidden>
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-6" class="bx--label">Date de remisage</label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input type="text" id="date-picker-6" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>Vous pouvez mettre le véhicule au rancart. <br> Véhicule est mis au
+                                                    rancart parce que le propriétaire ne compte plus jamais l'utiliser,
+                                                    souvent parce qu'il est devenu
+                                                    inutilisable, par exemple en cas de perte totale ou de bris majeur.</p>
+
+
+
+                                                <br><br>
+                                            </div>
+
+                                            <br>
+                                            <a  class="bx--link" id="link-3">Retirer des véhicules à remiser,
+                                                déremiser ou mettre au rancart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="notification-container">
+
+                                <div id="div1" data-notification class="bx--toast-notification bx--toast-notification--success"
+                                    style="display: none;" role="alert">
+                                    <div class="bx--toast-notification__details">
+                                        <h3 class="bx--toast-notification__title">Honda Odyssey 2017 <br> à été retirer</h3>
+                                        <p class="bx--toast-notification__subtitle">Subtitle text goes here.</p>
+                                        <p class="bx--toast-notification__caption">Time stamp [2:15:20]</p>
+                                    </div>
+                                    <button data-notification-btn class="bx--toast-notification__close-button" type="button">
+                                        <svg class="bx--toast-notification-icon" aria-label="close" width="10" height="10"
+                                            viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.32 5L10 8.68 8.68 10 5 6.32 1.32 10 0 8.68 3.68 5 0 1.32 1.32 0 5 3.68 8.68 0 10 1.32 6.32 5z"
+                                                fill-rule="nonzero" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div id="div2" data-notification class="bx--toast-notification bx--toast-notification--success"
+                                    style="display: none;" role="alert">
+                                    <div class="bx--toast-notification__details">
+                                        <h3 class="bx--toast-notification__title">Mercedes E550 2015 <br> à été retirer</h3>
+                                        <p class="bx--toast-notification__subtitle">Subtitle text goes here.</p>
+                                        <p class="bx--toast-notification__caption">Time stamp [2:15:29]</p>
+                                    </div>
+                                    <button data-notification-btn class="bx--toast-notification__close-button" type="button">
+                                        <svg class="bx--toast-notification-icon" aria-label="close" width="10" height="10"
+                                            viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.32 5L10 8.68 8.68 10 5 6.32 1.32 10 0 8.68 3.68 5 0 1.32 1.32 0 5 3.68 8.68 0 10 1.32 6.32 5z"
+                                                fill-rule="nonzero" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div id="div3" data-notification class="bx--toast-notification bx--toast-notification--success"
+                                    style="display: none;" role="alert">
+                                    <div class="bx--toast-notification__details">
+                                        <h3 class="bx--toast-notification__title">Ford Escape 2011 <br> à été retirer</h3>
+                                        <p class="bx--toast-notification__subtitle">Subtitle text goes here.</p>
+                                        <p class="bx--toast-notification__caption">Time stamp [2:15:29]</p>
+                                    </div>
+                                    <button data-notification-btn class="bx--toast-notification__close-button" type="button">
+                                        <svg class="bx--toast-notification-icon" aria-label="close" width="10" height="10"
+                                            viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.32 5L10 8.68 8.68 10 5 6.32 1.32 10 0 8.68 3.68 5 0 1.32 1.32 0 5 3.68 8.68 0 10 1.32 6.32 5z"
+                                                fill-rule="nonzero" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <br>
+                            </div>
+                        </div>
+<!-- ****************************************************************************************************************************** -->
+
+                                        <div class="bx--row">
+                                                <div class="bx--col-xs-12">
+                                                        <div data-modal id="modal-cancel" class="bx--modal" tabindex="-1">
+                                                            <div class="bx--modal-container">
+                                                                <div class="bx--modal-header">
+                                                                <p class="bx--modal-header__label bx--type-delta">Annuler la transaction</p>
+                                                                <p class="bx--modal-header__heading bx--type-beta">Êtes vous sur de vouloir annuler cette transaction?</p>
+                                                                <button class="bx--modal-close" type="button" data-modal-close aria-label="close modal">
+                                                                    <svg class="bx--modal-close__icon" width="10" height="10" viewBox="0 0 10 10" fill-rule="evenodd">
+                                                                    <title>Close Modal</title>
+                                                                    <path d="M9.8 8.6L8.4 10 5 6.4 1.4 10 0 8.6 3.6 5 .1 1.4 1.5 0 5 3.6 8.6 0 10 1.4 6.4 5z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                </div>
+                            
+                                                                <div class="bx--modal-content">
+                                                                <p>En annulant cetter transaction, vous predrez toutes les informations inscrites jusqu'à présent.
+                                                                    À tout moment, vous pourrez recommencer la transaction.
+                                                                </p>
+                                                                </div>
+                            
+                                                                <div class="bx--modal-footer">
+                                                                <button class="bx--btn bx--btn--secondary" data-modal-close type="button">Annuler</button>
+                                                                <button class="bx--btn bx--btn--danger" type="button" data-modal-close data-modal-primary-focus onclick="window.location.href='../../index.html'" >Confirmer</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div id="additionalContent" class="supfooter">
+                                                                        <p class="bx--type-zeta ">Pour plus d’information :
+                                                                                <a href="https://saaq.gouv.qc.ca/immatriculation/remiser-deremiser-mettre-rancart/" class="bx--link"><span style="font-weight: normal;">Remiser un véhicule, le déremiser ou le mettre au rancart</span></a>
+                                                                        </p>
+                                                            </div>
+                            
+                                                            <div class="footer">
+                                                                    <div id="backStepBtn">
+                                                                        <button class="bx--btn bx--btn--secondary" type="button" style="color:#fff; margin:8px;" onclick="window.location.href='remisage-1.html'">Revenir à l'étape précédente</button>
+                                                                        <button class="bx--btn bx--btn--secondary"  data-modal-target="#modal-cancel" aria-label="danger" type="button" style="color:#fff; margin:8px;">Annuler</button>
+                                                                    </div>
+                                                                    <div id="nextStepBtn">
+                                                                        <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                                                                        <button class="bx--btn bx--btn--primary" onclick="window.location.href='remisage-3.html'"
+                                                                            style="margin:8px;" type="button">Passer à l’étape <strong>Coût</strong></button>
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                            <br><br><br><br><br><br><br>
+                                        </div>
+
+                    </div>
+                    <!-- End of div .bx--grid-->
+
+        </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="../../css-js/saaq-components.js"></script>
+
+    <script>
+        var element =  document.getElementById("link-1");
+        element.addEventListener("click", function(){ hideCarCard(1); });
+        element =  document.getElementById("link-2");
+        element.addEventListener("click", function(){ hideCarCard(2); });
+        element =  document.getElementById("link-3");
+        element.addEventListener("click", function(){ hideCarCard(3); });
+
+
+        // Hide cards
+        function hideCarCard(x) {
+            switch(x) {
+            case 1:
+                $("#div1").delay( 1500 ).fadeIn(1500).delay(3500).fadeOut(1000);
+                $("#bx--card-1").fadeOut(800);
+                break;
+            case 2:
+                $("#div2").delay( 1500 ).fadeIn(1500).delay(3500).fadeOut(1000);
+                $("#bx--card-2").fadeOut(800);
+                break;
+            case 3:
+                $("#div3").delay( 1500 ).fadeIn(1500);
+                $("#bx--card-3").fadeOut(800);
+            break;
+            default:
+                console.log("Error in hide Car Card");
+            break;
+            }
+            
+        }
+
+    </script>
+
+    <script>
+    // Date picker
+    var today = new Date();
+
+
+    function initDatePickers() {
+        var date_picker_1 = document.getElementById("date-picker-1");
+        date_picker_1.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        var date_picker_2 = document.getElementById("date-picker-2");
+        date_picker_2.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+            var date_picker_3 = document.getElementById("date-picker-3");
+        date_picker_3.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        var date_picker_4 = document.getElementById("date-picker-4");
+        date_picker_4.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        var date_picker_6 = document.getElementById("date-picker-6");
+        date_picker_6.addEventListener('change', function (e){
+            getDatePickerInput(e);
+            });
+        
+    }
+
+    function getDatePickerInput(e) {
+        var input_date = e.target.value;
+
+        console.log(isDateFutur(input_date.split("/")));
+        if (!isDateFutur(input_date.split("/"))){
+            invalideDateInput(e.target);
+        }
+        else{
+            valideDateInput(e.target);
+        }
+
+    }
+
+    function isDateFutur(input_date) {
+        if (input_date[2] > getCurrentYear()){
+            return true;
+        }
+        else if (input_date[2] == getCurrentYear() && input_date[0] > getCurrentMonth()){
+            return true;
+        }
+        else if (input_date[2] == getCurrentYear() && input_date[0] == getCurrentMonth() && input_date[1] >= getCurrentDay()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function valideDateInput(datePicker) {
+        datePicker.removeAttribute("data-invalid");
+    }
+    function invalideDateInput(datePicker) {
+        datePicker.setAttribute("data-invalid","true");
+    }
+
+    // Return current date :: Day, Month, Year.
+    function getCurrentDay() {
+        var dd = today.getDate();
+        
+        if(dd<10) {
+            dd = '0'+dd
+        }
+        return dd; 
+    }
+    function getCurrentMonth() {
+        var mm = today.getMonth()+1; //January is 0!
+
+        if(mm<10) {
+            mm = '0'+mm
+        } 
+
+        return mm;
+        
+    }
+    function getCurrentYear() {
+        var yyyy = today.getFullYear();
+        return yyyy;
+    }
+
+    initDatePickers();
+
+    </script>
+
+
+<script>
+        function openSlideMenu(){
+            // document.getElementById('mainbody').style.marginLeft = '0';
+            document.getElementById('menu').style.width = '270px';
+            document.getElementById('main-content').style.paddingLeft = '150px';
+            document.getElementById('main-content').style.paddingRight = '0px';
+            document.getElementById('backStepBtn').style.paddingLeft = '280px';
+            document.getElementById('additionalContent').style.paddingLeft = '280px';
+
+        }
+        function closeSlideMenu(){
+            document.getElementById('menu').style.width = '0';
+            document.getElementById('main-content').style.paddingLeft = '25px';
+            document.getElementById('mainbody').style.marginLeft = '5%';
+            document.getElementById('main-content').style.paddingRight = '25px';
+            document.getElementById('backStepBtn').style.paddingLeft = '10%';
+            document.getElementById('additionalContent').style.paddingLeft = '10%';
+        }
+</script>
+<!-- side nav scripts -->
+
+
+</body>
+
+</html>

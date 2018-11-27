@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>SAAQClic - </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../css-js/saaq-components.css">
+    <script src="../css-js/user-testing-func.js"></script>
+
+</head>
+
+<body>
+
+
+    
+    <div id="mainbody">
+        <div class="bx--grid" id="main-content">
+            
+            <div class="bx--row">
+                <div class="bx--col-xs-12 ">
+                    <br />
+                    <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+                        <div class="bx--breadcrumb-item">
+                            <a href="dashboard.html" class="bx--link">Mon Espace Client</a>
+                        </div>
+                        <div class="bx--breadcrumb-item">
+                            <a href="dashboard.html" class="bx--link">Boîte aux lettre</a>
+                        </div>
+                        <div class="bx--breadcrumb-item">
+                            <a href="remisage-1.html" class="bx--link">Change de dates pour la période de dégel de la zone 2</a>
+                        </div>
+                        <div class="bx--breadcrumb-item">
+                        </div>
+                    </nav>
+                    <div class="bx--col-xs-12">
+                            <br><br>
+                            <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Retour à la liste des message</button>
+                            <br>
+                            <br>
+                            <h1>Ministère des transports, de la Mobilité durable et de l’Électrification des transports</h1>
+                            <br>
+                            <br>
+                            <p class="bx--type-caption">2020/01/01 <br>
+                                Change de dates pour la periode de dégel de la zone 2
+                            </p>
+                            <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bx--row">
+                <div class="bx--col-xs-12">
+                        <br><br>
+                        <button class="bx--btn bx--btn--sm bx--btn--primary" onclick="window.location.href='#.html'" type="button">Épingler</button>
+                        <br>
+                        <br>
+                </div>
+            </div>
+
+            <!-- ****************************************************************************************************************************** -->
+            <div class="bx--row">
+                <div class="bx--col-xs-12">
+                    <div class="bx--tile">
+                        <br><br><br><br>
+                        <br><br><br><br>
+                        <br><br><br><br>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="bx--row">
+                <div class="bx--col-xs-12">
+                        <button class="bx--btn bx--btn--primary" type="button">
+                        [Document title] — [Resource Type]
+                        <svg style="fill:#ffffff; margin-left:0.75em" width="12" height="16" viewBox="0 0 12 16">
+                            <path d="M10.581 3.996L8.014 1.429l.026 2.559 2.541.008zM7.011 1H1v14h10V4.997l-2.963-.01a1 1 0 0 1-.997-.99L7.01 1zM1 0h7l4 4v11a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path>
+                            <path d="M3 9h6v1H3zm0 3h6v1H3z"></path>
+                        </svg>
+                        </button>
+
+                </div>
+            </div>
+
+
+            <!-- ****************************************************************************************************************************** -->
+
+            <div class="bx--row">
+                <br><br><br>
+            </div>
+
+        </div>
+        <!-- End of div .bx--grid-->
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="scripts/libs/bootstrap/bootstrap.js"></script>
+    <script src="../css-js/saaq-components.js"></script>
+    <script>
+
+    </script>
+    <script>
+        var openSideNav = false;
+        toggleSideNav();
+
+        function toggleSideNav() {
+            //document.getElementById("mySidenav").style.width = "250px";
+            if (openSideNav == true) {
+                document.getElementById("main-content").style.marginLeft = "5%";
+                openSideNav = false;
+                console.log("NAV CLOSED");
+            } else {
+                document.getElementById("main-content").style.marginLeft = "17%";
+                openSideNav = true;
+                console.log("NAV OPENED");
+            }
+        }
+
+    </script>
+
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>
