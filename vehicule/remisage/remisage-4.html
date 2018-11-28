@@ -69,7 +69,7 @@
                 <button class="dropdown-btn active">Mes véhicules
                 <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
                 </button>
-                <div class="dropdown-container expanded" style="display:block">
+                <div class="dropdown-container expanded" >
                     <a class="sideNavItem sideNavItem-Sub active" href="#">Déremiser, remiser ou mettre au rancart</a>
                     <a class="sideNavItem sideNavItem-Sub" href="#">Achat & vente d'un véhicule</a>
                     <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
@@ -125,7 +125,7 @@
                                     <a href="../../index.html" class="bx--link">Mon Espace Client</a>
                                 </div>
                                 <div class="bx--breadcrumb-item">
-                                    <a href="../vehicule.html" class="bx--link">Véhicules</a>
+                                    <a href="../vehicule.html" class="bx--link">Véhicules et plaques d’immatriculation</a>
                                 </div>
                                 <div class="bx--breadcrumb-item">
                                     <a href="remisage-1.html" class="bx--link">Remiser, déremiser ou mettre au rancart</a>
@@ -149,7 +149,7 @@
                                         <circle cx="12" cy="12" r="12"></circle>
                                         <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
                                         </svg>
-                            <p class="bx--progress-label">Sélection</p>
+                            <p class="bx--progress-label">Véhicules</p>
                             <span class="bx--progress-line"></span>
                         </li>
                         <li class="bx--progress-step bx--progress-step--complete">
@@ -200,7 +200,7 @@
                         <div class="bx--col-xs-12">
                             <br>
                             <br>
-                            <h4 class="bx--type-zeta">Honda Odyssey 2017 <br> 000 ABC #12345678912345678</h4>
+                            <!-- <h4 class="bx--type-zeta">Honda Odyssey 2017 <br> 000 ABC #12345678912345678</h4> -->
                             <br>
                             </div>
                         </div> 
@@ -212,8 +212,8 @@
                             <table class="bx--data-table-v2">
                                 <tbody>
                                 <tr class="expandable-row">
-                                    <td>Total à payer</td>
-                                    <td>3 238,70 $</td>
+                                    <td>Total du remboursement</td>
+                                    <td>-70,34 $</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -227,7 +227,7 @@
                             <div class="bx--col-xs-12">
                                 <h4 class="bx--type-epsilon">Compte bancaire à utiliser pour le paiement</h4>  
                                 <br>
-                                <div data-notification id="account-toast"  class="bx--toast-notification bx--toast-notification--success" role="alert" style="display: none;">
+                                <!-- <div data-notification id="account-toast"  class="bx--toast-notification bx--toast-notification--success" role="alert" style="display: none;">
                                         <div class="bx--toast-notification__details">
                                             <h3 class="bx--toast-notification__title">Notification title</h3>
                                             <p class="bx--toast-notification__subtitle">Subtitle text goes here.</p>
@@ -239,7 +239,7 @@
                                             />
                                         </svg>
                                         </button>
-                                    </div>
+                                    </div> -->
                                 <br>
 
                                 <legend class="bx--label">Choisir un compte</legend>
@@ -248,9 +248,9 @@
                                     <input id="radio-button-1" class="bx--radio-button" type="radio" value="red" name="radio-button" tabindex="0" checked>
                                     <label for="radio-button-1" class="bx--radio-button__label">
                                         <span class="bx--radio-button__appearance"></span>
-                                        <p class="bx--type-caption"><strong> Alias du compte<br />
-                                        Nom de l'institution financière</strong><br />
-                                        Adresse de la succursale</p>
+                                        <p class="bx--type-caption"><strong>Compte personnel<br />
+                                        Banque du Canada</strong><br />
+                                        234 rue du Canada, Québec, QC, G1X 7K0</p>
                                     </label>
                                     <br />
                                     </li>
@@ -258,9 +258,9 @@
                                     <input id="radio-button-2" class="bx--radio-button" type="radio" value="green" name="radio-button" tabindex="1">
                                     <label for="radio-button-2" class="bx--radio-button__label">
                                         <span class="bx--radio-button__appearance"></span>
-                                        <p class="bx--type-caption"><strong> Alias du compte<br />
-                                        Nom de l'institution financière</strong><br />
-                                        Adresse de la succursale</p>
+                                        <p class="bx--type-caption"><strong>Compte familial<br />
+                                            Caisse du potentiel</strong><br />
+                                            090 rue du potentiel, Québec, QC, G2C 7H8</p>
                                     </label>
                                     <br />
                                     </li>
@@ -268,21 +268,21 @@
                                     <input id="radio-button-2" class="bx--radio-button" type="radio" value="green" name="radio-button" tabindex="1">
                                     <label for="radio-button-2" class="bx--radio-button__label">
                                         <span class="bx--radio-button__appearance"></span>
-                                        <p class="bx--type-caption"><strong> Alias du compte temporaire<br />
-                                        Nom de l'institution financière</strong><br />
-                                        Adresse de la succursale</p>
+                                        <p class="bx--type-caption"><strong>Compte temporaire<br />
+                                        Banque de Montreal</strong><br />
+                                        229 rue de Montreal, Québec, QC, H4V 1Z9</p>
                                     </label>
                                     <br />
                                     </li>
                                 </ul>
                 
-                                <button class="bx--btn bx--btn--primary" id="modal-account-btn" type="button" data-modal-target="#modal">Ajouter une adresse</button>
+                                <button class="bx--btn bx--btn--primary" id="modal-account-btn" type="button" data-modal-target="#modal">Ajouter un compte bancaire</button>
                 
                                 <div data-modal id="modal" class="bx--modal" tabindex="-1">
                                     <div class="bx--modal-container">
                                     <div class="bx--modal-header">
-                                        <p class="bx--modal-header__label bx--type-delta">Livraison de plaque</p>
-                                        <p class="bx--modal-header__heading bx--type-beta">Adresse temporaire</p>
+
+                                        <p class="bx--modal-header__heading bx--type-beta">Compte bancaire temporaire</p>
                                         <button class="bx--modal-close" type="button" data-modal-close aria-label="close modal">
                                         <svg class="bx--modal-close__icon" width="10" height="10" viewBox="0 0 10 10" fill-rule="evenodd">
                                             <title>Close Modal</title>
@@ -293,20 +293,20 @@
                 
                                     <div class="bx--modal-content">
                                         <div class="bx--form-item">
-                                        <label for="text-input-1" class="bx--label">Alias du compte :</label>
-                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="Nom du compte 1">
+                                        <label for="text-input-1" class="bx--label">Alias du compte</label>
+                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="Nom du compte">
                                         </div>
                                         <div class="bx--form-item">
-                                        <label for="text-input-1" class="bx--label">Numero de succursale :</label>
-                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="00011">
+                                        <label for="text-input-1" class="bx--label">Numéro de succursale</label>
+                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="Inscrire votre numéro de succursale">
                                         </div>
                                         <div class="bx--form-item">
-                                        <label for="text-input-1" class="bx--label">Numéro de l'institution financière: </label>
-                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="039">
+                                        <label for="text-input-1" class="bx--label">Numéro de l'institution financière</label>
+                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="Inscrire votre numéro de l'institution financière">
                                         </div>
                                         <div class="bx--form-item">
                                         <label for="text-input-1" class="bx--label">Numéro de compte</label>
-                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="1234567">
+                                        <input id="text-input-1" type="text" class="bx--text-input" placeholder="Inscrire votre numéro de compte">
                                         </div>
                                     </div>
                 

@@ -67,7 +67,7 @@
             <button class="dropdown-btn active">Mes véhicules
             <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
             </button>
-            <div class="dropdown-container expanded" style="display:block">
+            <div class="dropdown-container expanded" >
                 <a class="sideNavItem sideNavItem-Sub active" href="remisage-1.html">Déremiser, remiser ou mettre au rancart</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Achat & vente d'un véhicule</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
@@ -124,7 +124,7 @@
                                 <a href="../../index.html" class="bx--link">Mon Espace Client</a>
                             </div>
                             <div class="bx--breadcrumb-item">
-                                <a href="../vehicule.html" class="bx--link">Véhicules</a>
+                                <a href="../vehicule.html" class="bx--link">Véhicules et plaques d’immatriculation</a>
                             </div>
                             <div class="bx--breadcrumb-item">
                                 <a href="remisage-1.html" class="bx--link">Remiser, déremiser ou mettre au rancart</a>
@@ -148,7 +148,7 @@
                                 <circle cx="12" cy="12" r="12"></circle>
                                 <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
                             </svg>
-                            <p class="bx--progress-label">Sélection</p>
+                            <p class="bx--progress-label">Véhicules</p>
                             <span class="bx--progress-line"></span>
                         </li>
                         <li class="bx--progress-step bx--progress-step--complete">
@@ -197,7 +197,7 @@
                 <div class="bx--col-xs-12">
                     <br />
                     <br />
-                    <h3>Détails des coûts de la transaction</h3>
+                    <h3>Détails sur le coût de la transaction</h3>
                     <br><br>
                 </div>
             </div>
@@ -214,26 +214,25 @@
                                     </button>
                                     <div id="pane1" class="bx--accordion__content">
                                         <div class="bx--data-table-v2-container" data-table-v2>
+                                                <h5 class="bx--data-table-v2-header">Montant du remboursement</h5>
                                                 <table class="bx--data-table-v2  ">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Categorie</th>
-                                                            <th>Montant Principale</th>
-                                                        </tr>
-                                                    </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td>Droits d'immatriculation</td>
-                                                            <td>50,74 $</td>
+                                                            <td>-50,75 $</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Contribution d’assurance</td>
-                                                            <td>21,98 $</td>
+                                                            <td>-21,98 $</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Taxe contribution d'assurance</td>
-                                                            <td>1,98 $</td>
+                                                            <td>Taxe sur la contribution d'assurance</td>
+                                                            <td>-1,98 $</td>
                                                         </tr>
+                                                        <tr>
+                                                                <td>Sous-total</td>
+                                                                <td>-74,71 $</td>
+                                                            </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -248,28 +247,28 @@
                                     </button>
                                     <div id="pane2" class="bx--accordion__content">
                                         <div class="bx--data-table-v2-container" data-table-v2>
-                                            <table class="bx--data-table-v2  ">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Categorie</th>
-                                                        <th>Montant Principale</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Droits d'immatriculation</td>
-                                                        <td>50,74 $</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Contribution d’assurance</td>
-                                                        <td>21,98 $</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Taxe contribution d'assurance</td>
-                                                        <td>1,98 $</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                <h5 class="bx--data-table-v2-header">Montant à payer</h5>
+                                                <table class="bx--data-table-v2">
+                                                    
+                                                    <tbody>
+                                                        <tr class="expandable-row">
+                                                            <td>Droits d'immatriculation</td>
+                                                            <td>67,75 $</td>
+                                                        </tr>
+                                                        <tr class="expandable-row">
+                                                            <td>Contribution d'assurance</td>
+                                                            <td>29,30 $</td>
+                                                        </tr>
+                                                        <tr class="expandable-row">
+                                                            <td>Taxe sur contribution d'assurance</td>
+                                                            <td>2,64 $</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sous-total</td>
+                                                            <td>99,69 $</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                     </div>
                                 </li>
@@ -282,28 +281,27 @@
                                     </button>
                                     <div id="pane3" class="bx--accordion__content">
                                         <div class="bx--data-table-v2-container" data-table-v2>
-                                            <table class="bx--data-table-v2  ">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Categorie</th>
-                                                        <th>Montant Principale</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Droits d'immatriculation</td>
-                                                        <td>50,74 $</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Contribution d’assurance</td>
-                                                        <td>21,98 $</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Taxe contribution d'assurance</td>
-                                                        <td>1,98 $</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                <h5 class="bx--data-table-v2-header">Montant du remboursement</h5>
+                                                <table class="bx--data-table-v2 ">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Droits d'immatriculation</td>
+                                                            <td>-50,74 $</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Contribution d’assurance</td>
+                                                            <td>-21,98 $</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Taxe sur la contribution d'assurance</td>
+                                                            <td>-1,98 $</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sous-total</td>
+                                                            <td>-74,71 $</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                     </div>
                                 </li>
@@ -312,192 +310,75 @@
                 </div>
             </div>
 
-            <div class="bx--row">
-                <div class="bx--col-xs-12">
-                    <br />
-                    <br />
-                    <h3>Remboursement</h3>
-                    <!-- <br>
-                    <p class="bx--type-caption">
-                        Bonne nouvelle, avez un crédit que vous pouvez appliquer au coûts de ce service. Vous devez...
-                    </p>
-                    <br>
-                    <div class="bx--data-table-v2-container" data-table-v2>
-                    <table class="bx--data-table-v2">
-                            <tbody>
-                                <tr class="expandable-row">
-                                    <th>Détails du crédit</th>
-                                    <th>- 100 $</th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
-                    <br><br>
 
-                    <div class="bx--data-table-v2-container" data-table-v2>
-                        <h3>Total à payer</h3>
-                        <br>
-                        <table class="bx--data-table-v2">
-                            <thead>
-                                <tr>
-                                    <th>Détails du crédit</th>
-                                    <th>843,98 $</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="expandable-row">
-                                    <td>Crédit appliqué</td>
-                                    <td>136,47 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Partie SAAQ</td>
-                                    <td>880,45 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Frais d’intérêt pour l’étalement</td>
-                                    <td>26,96 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Montant dû avec frais d’étalement</td>
-                                    <td>907,41 $</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
 
             <div class="bx--row">
-                <div class="bx--col-xs-12">
-                    <br />
-                    <br />
-                    <h3>Remboursement</h3>
-                    <!-- <br>
-                        <p class="bx--type-caption">
-                            Bonne nouvelle, avez un crédit que vous pouvez appliquer au coûts de ce service. Vous devez...
-                        </p>
-                        <br>
+                    <div class="bx--col-xs-12">
+                        <br />
+                        <br />
+                        <h3>Exemptions</h3>
+                        <p>Le montant du remboursement d’un remisage est établi selon la date du remisage et l’expiration de l’immatriculation. Le montant exclut le mois en cours. Toutefois, si un déremisage est effectué dans le même mois, une exemption mensuelle pourrait s’appliquer.</p>
+    
+                        <br><br>
+    
                         <div class="bx--data-table-v2-container" data-table-v2>
-                        <table class="bx--data-table-v2">
+                            <table class="bx--data-table-v2">
                                 <tbody>
                                     <tr class="expandable-row">
-                                        <th>Détails du crédit</th>
-                                        <th>- 100 $</th>
+                                        <td>Droits d’immatriculation appliquée (mois de novembre déremisage)</td>
+                                        <td>-17,00 $</td>
+                                    </tr>
+                                    <tr class="expandable-row">
+                                        <td>Contribution d'assurance appliquée</td>
+                                        <td>-7,30 $ </td>
+                                    </tr>
+                                    <tr class="expandable-row">
+                                        <td>Taxe sur contribution appliquée</td>
+                                        <td>-0,66 $ </td>
+                                    </tr>
+                                    <tr class="expandable-row">
+                                        <td>Exemption applicable d'ici le 30 novembre 2018</td>
+                                        <td>1 </td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div> -->
-                    <br><br>
-
-                    <div class="bx--data-table-v2-container" data-table-v2>
-                        <h3>Total à payer</h3>
-                        <br>
-                        <table class="bx--data-table-v2">
-                            <tbody>
-                                <tr class="expandable-row">
-                                    <td>Montant à rembourser</td>
-                                    <td>69,90 $</td>
-                                </tr>
-
-                                <tr class="expandable-row">
-                                    <td>Frais d’administration</td>
-                                    <td>4,50 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Exemption appliqué (mois novembre</td>
-                                    <td>24,70 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Sous-total</td>
-                                    <td>49,70 $</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="bx--row">
-                <div class="bx--col-xs-12">
-                    <br />
-                    <br />
-                    <h3>Remboursement</h3>
+            
 
-                    <br><br>
-
-                    <div class="bx--data-table-v2-container" data-table-v2>
-                        <h3>Total à payer</h3>
-                        <br>
-                        <table class="bx--data-table-v2">
-                            <thead>
-                                <tr>
-                                    <th>Détails du crédit</th>
-                                    <th>843,98 $</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="expandable-row">
-                                    <td>Crédit appliqué</td>
-                                    <td>136,47 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Partie SAAQ</td>
-                                    <td>880,45 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Frais d’intérêt pour l’étalement</td>
-                                    <td>26,96 $</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Montant dû avec frais d’étalement</td>
-                                    <td>907,41 $</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="bx--row">
+                    <div class="bx--col-xs-12">
+                        <br />
+                        <br />
+                        <h3>Total du remboursement</h3>
+                        <br><br>
+    
+                        <div class="bx--data-table-v2-container" data-table-v2>
+                            <table class="bx--data-table-v2">
+                                <tbody>
+                                    <tr class="expandable-row">
+                                        <td>Sous-total</td>
+                                        <td>-49,73 $</td>
+                                    </tr>
+                                    <tr class="expandable-row">
+                                        <td>Exemption</td>
+                                        <td>-24,96 $ </td>
+                                    </tr>
+                                    <tr class="expandable-row">
+                                        <td>Frais d’administration </td>
+                                        <td>4,35 $ </td>
+                                    </tr>
+                                    <tr class="expandable-row">
+                                        <td>Total du remboursement </td>
+                                        <td>-70,34 $</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="bx--row">
-                <div class="bx--col-xs-12">
-                    <br />
-                    <br />
-                    <h3>Remboursement</h3>
-
-                    <br><br>
-
-                    <div class="bx--data-table-v2-container" data-table-v2>
-                        <h3>Total à payer</h3>
-                        <br>
-                        <table class="bx--data-table-v2">
-                            <thead>
-                                <tr>
-                                    <th>Détails du crédit</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="expandable-row">
-                                    <td>Droits d'immatriculation appliquée (mois novembre déremisage)</td>
-                                    <td>(17,00 $)</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Contribution d'assurance appliquée</td>
-                                    <td>(7,30 $)</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Taxe sur contribution appliquéet</td>
-                                    <td>(0,66$)</td>
-                                </tr>
-                                <tr class="expandable-row">
-                                    <td>Exemption applicable d'ici le 30 novembre 2018</td>
-                                    <td>1 </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
             <!-- ****************************************************************************************************************************** -->
 
             <div class="bx--row">

@@ -63,7 +63,7 @@
             <button class="dropdown-btn active">Mes véhicules
             <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span>
             </button>
-            <div class="dropdown-container expanded" style="display:block" >
+            <div class="dropdown-container expanded" >
                 <a class="sideNavItem sideNavItem-Sub active" href="#">Déremiser, remiser ou mettre au rancart</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Achat & vente d'un véhicule</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Certificats d'immatriculation</a>
@@ -84,7 +84,7 @@
             <button class="dropdown-btn" onclick="window.location.href='../../permis/permis.html'">Mes permis <span style="float:right"><svg width="10" height="5" viewBox="0 0 10 5" fill="#818181"><path d="M0 0l5 4.998L10 0z"></path></svg></span></button>
             <div class="dropdown-container collapsed">
                 <a class="sideNavItem sideNavItem-Sub" href="#">Remplacer de permis</a>
-                <a class="sideNavItem sideNavItem-Sub active" href="annuler-permis-1.html">Annuler un permis ou une classe de permis</a>
+                <a class="sideNavItem sideNavItem-Sub active" href="#">Annuler un permis ou une classe de permis</a>
                 <a class="sideNavItem sideNavItem-Sub" href="#">Vérifier un permis de conduire</a>
             </div>
 
@@ -119,7 +119,7 @@
                                         <a href="../../index.html" class="bx--link">Mon Espace Client</a>
                                     </div>
                                     <div class="bx--breadcrumb-item">
-                                        <a href="../vehicule.html" class="bx--link">Véhicules</a>
+                                        <a href="../vehicule.html" class="bx--link">Véhicules et plaques d’immatriculation</a>
                                     </div>
                                     <div class="bx--breadcrumb-item">
                                         <a href="remisage-1.html" class="bx--link">Remiser, déremiser ou mettre au rancart</a>
@@ -143,7 +143,7 @@
                                             <circle cx="12" cy="12" r="12"></circle>
                                             <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
                                         </svg>
-                                        <p class="bx--progress-label">Sélection</p>
+                                        <p class="bx--progress-label">Véhicules</p>
                                         <span class="bx--progress-line"></span>
                                     </li>
                                     <li class="bx--progress-step bx--progress-step--current">
@@ -188,24 +188,25 @@
 
                         <!-- ****************************************************************************************************************************** -->
                         <div class="bx--row">
+                            <!-- car 1 -------------------------------------------------------------------------------------------- -->
                             <div class="bx--col-xs-12" id="bx--card-1">
                                 <br>
                                 <div class="bx--module bx--module--double">
                                     <div class="bx--module__inner">
                                         <div class="bx--module__header">
-                                            <p class="bx--module__title bx--type-alpha">Mercedes E550 2015 <br>F1A B2B #2710264271256392</p>
+                                            <p class="bx--module__title bx--type-alpha">Honda Odyssey 2017 <br> 000 ABC
+                                                – 12345678912345678</p>
                                         </div>
                                         <div class="bx--module__content" >
                                             <div data-content-switcher id="my-content-switcher" class="bx--content-switcher">
                                                 <button class="bx--content-switcher-btn  bx--btn--sm bx--content-switcher--selected"
-                                                    data-target=".demo--panel--opt-1">En circulation</button>
-                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-2">Remisé</button>
-                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Mettre
-                                                    au rancart</button>
+                                                    data-target=".demo--panel--opt-1">Déremiser</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-2">Remiser</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Mettre au rancart</button>
                                             </div>
                                             <div class="demo--panel--opt-1" aria-hidden="false">
                                                 <br>
-                                                <p><strong> Le véhicule est actuellement en circulation.</strong></p>
+                                                <h3>Le véhicule est actuellement en circulation</h3>
                                                 <br>
                                                 <br>
                                             </div>
@@ -221,11 +222,10 @@
                                                     effectué. Le montant du remboursementr est établi selon la date du
                                                     remisage et l'exploration de l'immatriculation. Le montant exclut le
                                                     mois en cours.</p>
-
                                                 <br>
                                                 <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
                                                     <div class="bx--date-picker-container">
-                                                        <label for="date-picker-1" class="bx--label">Date de remisage</label>
+                                                        <label for="date-picker-1" class="bx--label">Date d’entrée en vigueur </label>
                                                         <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
                                                             height="19" viewBox="0 0 17 19">
                                                             <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
@@ -241,14 +241,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div class="demo--panel--opt-3" aria-hidden="true" hidden>
                                                 <br>
-                                                
-                                                <p>Vous pouvez mettre en rancart votre véhicule <br> Véhicule est mis au
-                                                    rancart parce que le propriétaire ne compte plus jamais l'utiliser,
-                                                    souvent parce qu'il est devenu
-                                                    inutilisable, par exemple en cas de perte totale ou de bris majeur.</p>
+                                                <h3>Vous pouvez mettre au rancart le véhicule.</h3>
+                                                <br>
+                                                <p>Mettre au rancart un véhicule signifie qu’il ne peut plus circuler de façon définitive. Un véhicule est mis au rancart parce que le propriétaire ne compte plus jamais l'utiliser, souvent parce qu'il est devenu inutilisable, par exemple en cas de perte totale ou de bris majeur.
+                                                    Au moment de la mise au rancart, un remboursement de l'immatriculation peut être effectué. Le montant du remboursement est établi selon la date de la mise au rancart et l’expiration de l’immatriculation. Le montant exclut le mois en cours.
+                                                </p>
                                                 <br>
                                                 <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
                                                     <div class="bx--date-picker-container">
@@ -267,38 +266,33 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
                                                 <br><br>
                                             </div>
-
                                             <br>
-                                            <a class="bx--link" id="link-1"  >Retirer des véhicules à remiser,
-                                                déremiser ou mettre au rancart</a>
+                                            <a class="bx--link" id="link-1">Retirer le véhicule</a>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
                             </div>
+                            <!-- car 2 -------------------------------------------------------------------------------------------- -->
                             <div class="bx--col-xs-12" id="bx--card-2">
                                 <div class="bx--module bx--module--double">
                                     <div class="bx--module__inner">
                                         <div class="bx--module__header">
-                                            <p class="bx--module__title bx--type-alpha">Ford Escape 2011 <br> F2E 7V8 #1234567891234567</p>
+                                            <p class="bx--module__title bx--type-alpha">Mercedes E550 2015 <br> F1A B2B #2710264271256392</p>
                                         </div>
                                         <div class="bx--module__content">
                                             <div data-content-switcher id="my-content-switcher" class="bx--content-switcher">
                                                 <button class="bx--content-switcher-btn  bx--btn--sm bx--content-switcher--selected"
-                                                    data-target=".demo--panel--opt-4">En circulation</button>
-                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-5">Remisé</button>
-                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-6">Mettre
-                                                    au rancart</button>
+                                                    data-target=".demo--panel--opt-4">Déremiser</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-5">Remiser</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-6">Mettre au rancart</button>
                                             </div>
                                             <div class="demo--panel--opt-4" aria-hidden="false">
                                                 <br>
-                                                <p><strong>Il est impossible de circuler avec le véhicule. Il doit être déremisé avant d’être utilisé de nouveau.
-                                                    Sachez qu’un véhicule qui a été remisé plus de 12 mois doit être soumis à une vérification mécanique avant d’être déremisé.
-                                                    </strong></p>
+                                                <h3>Le véhicule est actuellement en circulation</h3>
+                                                <p></p>
                                                 <br>
                                                 <br>
                                             </div>
@@ -314,7 +308,6 @@
                                                     effectué. Le montant du remboursementr est établi selon la date du
                                                     remisage et l'exploration de l'immatriculation. Le montant exclut le
                                                     mois en cours.</p>
-
                                                 <br>
                                                 <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
                                                     <div class="bx--date-picker-container">
@@ -338,9 +331,15 @@
 
                                             <div class="demo--panel--opt-6" aria-hidden="true" hidden>
                                                 <br>
+                                                <h3>Vous pouvez mettre au rancart le véhicule.</h3>
+                                                <br>
+                                                <p>Mettre au rancart un véhicule signifie qu’il ne peut plus circuler de façon définitive. Un véhicule est mis au rancart parce que le propriétaire ne compte plus jamais l'utiliser, souvent parce qu'il est devenu inutilisable, par exemple en cas de perte totale ou de bris majeur.
+                                                    Au moment de la mise au rancart, un remboursement de l'immatriculation peut être effectué. Le montant du remboursement est établi selon la date de la mise au rancart et l’expiration de l’immatriculation. Le montant exclut le mois en cours.
+                                                    </p>
+                                                <br>
                                                 <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
                                                     <div class="bx--date-picker-container">
-                                                        <label for="date-picker-4" class="bx--label">Date de remisage</label>
+                                                        <label for="date-picker-4" class="bx--label">Date d’entrée en vigueur </label>
                                                         <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
                                                             height="19" viewBox="0 0 17 19">
                                                             <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
@@ -355,28 +354,22 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p>Vous pouvez mettre en rancart votre véhicule <br> Véhicule est mis au
-                                                    rancart parce que le propriétaire ne compte plus jamais l'utiliser,
-                                                    souvent parce qu'il est devenu
-                                                    inutilisable, par exemple en cas de perte totale ou de bris majeur.</p>
-        \
-
-                                                <br><br>
+                                                <br>
                                             </div>
 
                                             <br>
-                                            <a class="bx--link" id="link-2">Retirer des véhicules à remiser,
-                                                déremiser ou mettre au rancart</a>
+                                            <a class="bx--link" id="link-2">Retirer le véhicule</a>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
                             </div>
+                            <!-- car 3 -------------------------------------------------------------------------------------------- -->
                             <div class="bx--col-xs-12" id="bx--card-3">
                                 <div class="bx--module bx--module--double">
                                     <div class="bx--module__inner">
                                         <div class="bx--module__header">
-                                            <p class="bx--module__title bx--type-alpha">Ford Escape 2011 <br> F2E 7V8 -
+                                            <p class="bx--module__title bx--type-alpha">Ford Escape 2011 <br> F2E 7V8 –
                                                 #12345678912345678</p>
                                         </div>
                                         <div class="bx--module__content">
@@ -384,26 +377,37 @@
                                                 <button class="bx--content-switcher-btn  bx--btn--sm" data-target=".demo--panel--opt-7">En
                                                     circulation</button>
                                                 <button class="bx--content-switcher-btn bx--btn--sm bx--content-switcher--selected"
-                                                    data-target=".demo--panel--opt-8">Remisé</button>
+                                                    data-target=".demo--panel--opt-8">Remiser</button>
                                                 <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-9">Mettre
                                                     au rancart</button>
                                             </div>
                                             <div class="demo--panel--opt-7" aria-hidden="true" hidden>
                                                 <br>
-                                                <p><strong> Le véhicule est actuellement en circulation.</strong></p>
+                                                <h3>Vous pouvez déremiser le véhicule.</h3>
+                                                        <br>
+                                                        <p>Déremiser un véhicule signifie remettre en circulation un véhicule qui était remisé. Une fois déremisé, le véhicule peut de nouveau circuler. Le déremisage se fait le jour même seulement.
+                                                                Au moment du déremisage, le paiement de l'immatriculation est exigé. Le paiement couvre la période du mois en cours jusqu'à l’expiration de l’immatriculation.</p>
                                                 <br>
                                                 <br>
                                             </div>
                                             <div class="demo--panel--opt-8" aria-hidden="false">
                                                 <br>
-                                                <p><strong> Le véhicule est actuellement en remisé.</strong></p>
+                                                <h3>Le véhicule est actuellement remisé. </h3>
+                                                <br>
                                             </div>
 
                                             <div class="demo--panel--opt-9" aria-hidden="true" hidden>
                                                 <br>
+                                                <h3>Vous pouvez mettre au rancart le véhicule.
+                                                </h3>
+                                                <br>
+                                                <p> Mettre au rancart un véhicule signifie qu’il ne peut plus circuler de façon définitive. Un véhicule est mis au rancart parce que le propriétaire ne compte plus jamais l'utiliser, souvent parce qu'il est devenu inutilisable, par exemple en cas de perte totale ou de bris majeur.
+                                                    Au moment de la mise au rancart, un remboursement de l'immatriculation peut être effectué. Le montant du remboursement est établi selon la date de la mise au rancart et l’expiration de l’immatriculation. Le montant exclut le mois en cours.
+                                                    </p>
+                                                <br>
                                                 <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
                                                     <div class="bx--date-picker-container">
-                                                        <label for="date-picker-6" class="bx--label">Date de remisage</label>
+                                                        <label for="date-picker-6" class="bx--label">Date d’entrée en vigueur</label>
                                                         <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
                                                             height="19" viewBox="0 0 17 19">
                                                             <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
@@ -418,10 +422,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p>Vous pouvez mettre le véhicule au rancart. <br> Véhicule est mis au
-                                                    rancart parce que le propriétaire ne compte plus jamais l'utiliser,
-                                                    souvent parce qu'il est devenu
-                                                    inutilisable, par exemple en cas de perte totale ou de bris majeur.</p>
+                                                
 
 
 
@@ -429,22 +430,101 @@
                                             </div>
 
                                             <br>
-                                            <a  class="bx--link" id="link-3">Retirer des véhicules à remiser,
-                                                déremiser ou mettre au rancart</a>
+                                            <a  class="bx--link" id="link-3">Retirer le véhicule</a>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
                             </div>
+                            <!-- car 4 -------------------------------------------------------------------------------------------- -->
+                            <div class="bx--col-xs-12" id="bx--card-4">
+                                <div class="bx--module bx--module--double">
+                                    <div class="bx--module__inner">
+                                        <div class="bx--module__header">
+                                            <p class="bx--module__title bx--type-alpha">Ford F-150 <br> F2E 7V8 – 0254567891234567</p>
+                                        </div>
+                                        <div class="bx--module__content">
+                                            <div data-content-switcher id="my-content-switcher" class="bx--content-switcher">
+                                                <button class="bx--content-switcher-btn  bx--btn--sm" data-target=".demo--panel--opt-10">Déremiser</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm bx--content-switcher--selected" data-target=".demo--panel--opt-11">Remiser</button>
+                                                <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-12">Mettre
+                                                    au rancart</button>
+                                            </div>
+                                            <div class="demo--panel--opt-10" aria-hidden="true" hidden>
+                                                <br>
+                                                <h3>Le véhicule est actuellement en circulation.</h3>
+                                                <br>
+                                                <br>
+                                            </div>
+                                            <div class="demo--panel--opt-11" aria-hidden="false">
+                                                <br />
+                                                <h3>Vous pouvez remiser le véhicule.</h3>
+                                                <br>
+
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-3" class="bx--label">Date d’entrée en vigueur</label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input type="text" id="date-picker-3" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                            </div>
+
+                                            <div class="demo--panel--opt-12" aria-hidden="true" hidden>
+                                                    <br>
+                                                    <p>Vous pouvez mettre au rancart le véhicule. <br> Mettre au rancart un véhicule signifie qu’il ne peut plus circuler de façon définitive. Un véhicule est mis au rancart parce que le propriétaire ne compte plus jamais l'utiliser, souvent parce qu'il est devenu inutilisable, par exemple en cas de perte totale ou de bris majeur.
+                                                        Au moment de la mise au rancart, un remboursement de l'immatriculation peut être effectué. Le montant du remboursement est établi selon la date de la mise au rancart et l’expiration de l’immatriculation. Le montant exclut le mois en cours.
+                                                        </p>
+                                                <br>
+                                                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                                                    <div class="bx--date-picker-container">
+                                                        <label for="date-picker-6" class="bx--label">Date d’entrée en vigueur </label>
+                                                        <svg data-date-picker-icon class="bx--date-picker__icon" width="17"
+                                                            height="19" viewBox="0 0 17 19">
+                                                            <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                                                            <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                                                            <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                                                        </svg>
+                                                        <input type="text" id="date-picker-6" class="bx--date-picker__input"
+                                                            pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                                                            data-date-picker-input />
+                                                        <div class="bx--form-requirement">
+                                                            Inscrivez ou choisissez une date comprise entre la date du jour et la date d’expiration de l’immatriculation du véhicule.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <br><br>
+                                            </div>
+
+                                            <br>
+                                            <a  class="bx--link" id="link-4">Retirer le véhicule</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <!-- -------------------------------------------------------------------------------------------- -->
 
                             <div class="notification-container">
-
                                 <div id="div1" data-notification class="bx--toast-notification bx--toast-notification--success"
                                     style="display: none;" role="alert">
                                     <div class="bx--toast-notification__details">
-                                        <h3 class="bx--toast-notification__title">Honda Odyssey 2017 <br> à été retirer</h3>
-                                        <p class="bx--toast-notification__subtitle">Subtitle text goes here.</p>
-                                        <p class="bx--toast-notification__caption">Time stamp [2:15:20]</p>
+                                        <h3 class="bx--toast-notification__title">Retiré</h3>
+                                        <p class="bx--toast-notification__subtitle">Le véhicule Honda Odyssey 2017 000 ABC – 12345678912345678 a été retiré de la liste des véhicules à remiser, déremiser ou mettre au rancart.</p>
+                                        <p class="bx--toast-notification__caption">[2018-11-28-15:23]</p>
                                     </div>
                                     <button data-notification-btn class="bx--toast-notification__close-button" type="button">
                                         <svg class="bx--toast-notification-icon" aria-label="close" width="10" height="10"
@@ -454,6 +534,7 @@
                                         </svg>
                                     </button>
                                 </div>
+                                <!-- -------------------------------------------------------------------------------------------- -->
                                 <div id="div2" data-notification class="bx--toast-notification bx--toast-notification--success"
                                     style="display: none;" role="alert">
                                     <div class="bx--toast-notification__details">
